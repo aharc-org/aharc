@@ -7,7 +7,7 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        src: url('../fonts/montserrat-v29-latin-regular.woff2') format('woff2'); 
+        src: url('../assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2'); 
     }
     /* montserrat-italic - latin */
     @font-face {
@@ -15,7 +15,7 @@
         font-family: 'Montserrat';
         font-style: italic;
         font-weight: 400;
-        src: url('../fonts/montserrat-v29-latin-italic.woff2') format('woff2'); 
+        src: url('../assets/fonts/montserrat-v29-latin-italic.woff2') format('woff2'); 
     }
     /* montserrat-700 - latin */
     @font-face {
@@ -23,8 +23,16 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        src: url('../fonts/montserrat-v29-latin-700.woff2') format('woff2'); 
+        src: url('../assets/fonts/montserrat-v29-latin-700.woff2') format('woff2'); 
     }
+
+    @font-face {
+      font-display: swap; 
+      font-family: 'ManufacturingConsent';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype'); 
+    }    
 
     html, body {
         font-family: 'Montserrat', sans-serif;
@@ -42,7 +50,7 @@
 
     p {
         font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem);
-        line-height: 1.4;
+        line-height: 1.6;
         margin: 0 auto 0.5em;
         max-width: 65ch; /* about 65 characters per line */
         text-wrap: balance; 
@@ -142,7 +150,8 @@
         color: black;
         padding: 10px 0 0 ;             /* Small top padding */
         display: flex;
-        justify-content: space-between; /* Horizontal spacing */
+        /*justify-content: space-between; /* Horizontal spacing */
+        justify-content: center; /* Center all children spacing */
         align-items: center;            /* Center items vertically */
         max-width: 900px;               /* Single boxed content */
         margin: 0 auto;                 /* Center container horizontally */
@@ -150,7 +159,16 @@
     }
 
     header .logo {
-        margin-left: 20px;
+        /* margin-left: 20px; */
+        position: absolute;        /* Take logo out of flex flow */
+        left: 20px;       
+    }
+
+    header .site-title {
+        font-family: "ManufacturingConsent", serif;
+        font-weight: 400;
+        font-size: 4rem;
+        text-align: center;
     }
 
     header .strapline {
@@ -173,20 +191,20 @@
 
     nav {
         display: flex;
-        background-color:lightblue;
+        background-color:seagreen;
         justify-content: center;    /*Horizontal spacing */
         padding: 10px 0px;          /* Top and Bottom */
         max-width: 900px;           /* Single column boxed content */
         margin: 0 auto;             /* Center container horizontally */
     }
     nav a {
-        color: black;
+        color: lawngreen;
         padding: 0 15px;            /* Top and Bottom */
         text-decoration: none;      /* Remove underline */
         font-weight: bold;
     }
     nav a:hover {
-        color: blue;
+        color: white;
     }        
 
 /* Hero image */
@@ -243,14 +261,21 @@
         /*padding: 20px;*/
         box-sizing: border-box;
     }
-/*
-    .intro-title h2,
-    .intro-title h3,
-    .intro-title h4,
-    .intro-title h5 {
-        transform: translateX(-3%); /*This is fine — but check whether all these headers actually need the translation. It may cause inconsistent centering visually.*/
+    .intro-item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box; /* Ensure padding is included in width */
+        }
+ 
+    .intro-item img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
     }
-*/
 
     .intro-icon-container {
         display: flex;
@@ -371,7 +396,7 @@
     footer {
         display: flex;
         flex-direction: column;
-        background-color: lightblue;
+        background-color: lightpink;
         align-items: center; /* Center items horizontally */
         gap: 20px;
     }
