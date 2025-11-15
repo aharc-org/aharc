@@ -244,50 +244,46 @@
 
 /* Intro */
 
-    .intro-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-    }        
-    
-    .intro-text {      
-        width: 80vw; /* Set a maximum width for the text */
-        max-width: 768px; /* Set a maximum width for the centered box */
-        font-style: italic;
-        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
-        text-align: center;
-        /*text-align: left;*/
-        /*background: white;*/
-        /*padding: 20px;*/
-        box-sizing: border-box;
-    }
-    .intro-item {
-        flex: 1 1 calc(33.33% - 20px);
-        max-width: 600px;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        box-sizing: border-box; /* Ensure padding is included in width */
-        }
- 
-    .intro-item img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
-    }
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .intro-icon-container {
-        display: flex;
-        justify-content: center;
-        margin-top: -10px; /* Reduce space above the icon */
-    }
+.intro-text {
+    width: 80vw;
+    max-width: 768px;
+    font-style: italic;
+    font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
+    text-align: center;
+    box-sizing: border-box;
+}
 
-    .intro-icon {
-        width: 50px;
-        height: 50px;
-        display: none;
-    }
+.intro-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 768px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;  /* keep image centered */
+}
+
+.intro-item p {
+    max-width: 640px;        /* fixed readable line width */
+    margin: 0 auto;          /* centered below image */
+    text-align: justify;     /* variable word spacing */
+    text-justify: inter-word;
+}
+
+.intro-item img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 /* End intro */
 
