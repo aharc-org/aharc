@@ -27,17 +27,26 @@
 
     <section class="myPagefind-container">
         <section class="myPagefind-item">
-             <div id="search"></div>
+            <div id="search"></div>
         </section>
     </section>
 
-
- 
     <script src="pagefind/pagefind.js"></script>
     <script src="pagefind/pagefind-ui.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            new PagefindUI({ element: "#search" });
+            new PagefindUI({
+                element: "#search",
+                showSubResults: false,
+                snippetLength: 0,  // disable default snippet
+                processResult: (result) => {
+                    // Use the meta description instead of the snippet
+                    if (result.meta.description) {
+                        result.snippet = result.meta.description;
+                    }
+                    return result;
+                }
+            });
         });
     </script>
 
