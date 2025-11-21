@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alderholt Archives - Search</title>
+  <link rel="stylesheet" href="../../css/custom-expsearch.css">
+
+  <!-- Pagefind JS -->
+  <script src="pagefind/pagefind.js"></script>
+  <script src="pagefind/pagefind-ui.js"></script>
+
+  <style>
+    /* Simple card layout for search results */
+    .search-result-card {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      border: 1px solid #ddd;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+      gap: 12px;
+    }
+
+    .search-result-card img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .search-result-content {
+      flex: 1;
+    }
+
+    .search-result-content h3 {
+      margin: 0 0 4px 0;
+      font-size: 1.1rem;
+    }
+
+    .search-result-content p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alderholt Archives Search</h1>
+  </header>
+
+  <main>
+    <div id="search"></div>
+  </main>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: "#search",
+        snippetLength: 0, // disable automatic snippet
+        processResult: (result) => {
+          // Replace snippet with meta description
+          if (result.meta.description) result.snippet = result.meta.description;
+          return result;
+        },
+        resultTemplate: (result) => {
+          // Grab first image if any
+          const imgSrc = result.meta.image || result.page.find("img")?.src || "";
+          return `
+            <a href="${result.url}" class="search-result-card">
+              ${imgSrc ? `<img src="${imgSrc}" alt="">` : ""}
+              <div class="search-result-content">
+                <h3>${result.title}</h3>
+                <p>${result.snippet || ''}</p>
+              </div>
+            </a>
+          `;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
