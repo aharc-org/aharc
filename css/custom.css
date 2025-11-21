@@ -259,17 +259,17 @@
     .myPagefind-item {
         width:100%;
         max-width: 768px;
-        background-color: white;
+        background-color: blue;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
     }
 
-    #search pagefind-ui__result-title {
+    #search .pagefind-ui__result-title {
         background-color: limegreen;
     }
     
-    #search pagefind-ui__result-tags {
+    #search .pagefind-ui__result-tags {
         background-color: lawngreen; /* off white background */
         padding: 0.5rem;           /* optional padding */
     }
