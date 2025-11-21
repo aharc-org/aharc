@@ -495,5 +495,12 @@
 /* end media queries */
 
 
+/* search override */
+    .pagefind-ui__result-excerpt {
+        display: none !important;
+    }
+/*end search overide */
+
+
 
 
