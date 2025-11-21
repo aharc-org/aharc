@@ -248,7 +248,7 @@
 
 /* End hero */
 
-/* Pagefind Override*/
+/* Pagefind Search Override*/
 
    .myPagefind-container {
         display: flex;
@@ -266,10 +266,10 @@
     }
 
     #search a.pagefind-ui__result-link {
-        background-color: ffffdb;
+        background-color: limegreen;
     }
     
-    #search .data-pagefind-ui-meta{
+    #search .data-pagefind-ui-meta {
         background-color: lawngreen; /* off white background */
         padding: 0.5rem;           /* optional padding */
     }
