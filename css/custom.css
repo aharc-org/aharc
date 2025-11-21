@@ -265,11 +265,11 @@
         box-sizing: border-box;
     }
 
-    #search a.pagefind-ui__result-link {
+    #search pagefind-ui__result-title {
         background-color: limegreen;
     }
     
-    #search .data-pagefind-ui-meta {
+    #search pagefind-ui__result-tags {
         background-color: lawngreen; /* off white background */
         padding: 0.5rem;           /* optional padding */
     }
