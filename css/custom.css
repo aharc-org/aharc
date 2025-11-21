@@ -266,11 +266,11 @@
     }
 
     #search a.pagefind-ui__result-link {
-        background-color: aqua;
+        background-color: ffffdb;
     }
     
     #search .data-pagefind-ui-meta{
-        background-color: #lawngreen; /* off white background */
+        background-color: lawngreen; /* off white background */
         padding: 0.5rem;           /* optional padding */
     }
 
