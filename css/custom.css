@@ -91,13 +91,14 @@
 
     .content-item figure {
         text-align: center;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0; /* top&botto|l&ṛ| */   
     }
 
     .content-item img {
-        max-width: 50vw;
-        display: block;
-        margin: 3rem auto 1.5rem;
+        max-width: 100%; /* % not vw to respect container width */
+        height: auto; /* based on width no distortion */
+        display: block;   /*to allow centering */
+        margin: 3rem auto 1.5rem; /* top|l&ṛ|bottom */   
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
@@ -263,6 +264,12 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
     }
+
+    #search .pagefind-ui__result-excerpt {
+        background-color: #fafafa; /* off white background */
+        padding: 0.5rem;           /* optional padding */
+    }
+
 
 
     /* End Pagefind */
