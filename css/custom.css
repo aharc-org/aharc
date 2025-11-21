@@ -248,7 +248,7 @@
 
 /* End hero */
 
-/* Pagefind */
+/* Pagefind Override*/
 
    .myPagefind-container {
         display: flex;
@@ -265,9 +265,17 @@
         box-sizing: border-box;
     }
 
-    #search .pagefind-ui__result-excerpt {
-        background-color: #fafafa; /* off white background */
+    #search a.pagefind-ui__result-link {
+        background-color: aqua;
+    }
+    
+    #search .data-pagefind-ui-meta{
+        background-color: #lawngreen; /* off white background */
         padding: 0.5rem;           /* optional padding */
+    }
+
+    #search .pagefind-ui__result-excerpt { /*hide standard snippet */
+        display: none !important;
     }
 
 
@@ -443,6 +451,7 @@
 
 /* End footer */
 
+
 /* Media queries */
 
     @media only screen and  (max-width: 900px) {
@@ -501,12 +510,6 @@
     }  
 /* end media queries */
 
-
-/* search override */
-    .pagefind-ui__result-excerpt {
-        display: none !important;
-    }
-/*end search overide */
 
 
 
