@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Alderholt Archives Website Under Development 1122-10:42</title>
+    <title>Alderholt Archives Website Under Development</title>
 
 </head>
 <body>
@@ -26,7 +26,7 @@
 
     <section class="intro-container">
         <div class="intro-text">
-            <h2>A series of historical articles</h2>
+            <h2>A series of historical articles 1149</h2>
         </div> 
         <div  class="intro-item">
             <div class="intro-image">
@@ -49,20 +49,22 @@
 
 
     <footer>
+      <div id="footer-placeholder">
         <div class="item-footer">
-            <p>© 2025 Alderholt Archives</p> <!-- fallback content -->
+          <p>© 2025 Alderholt Archives</p> <!-- fallback content -->
         </div>
+      </div>
     </footer>
 
-<--Scripts -->
     <script>
-        fetch('footer.html')
-         .then(response => response.text())
-         .then(data => {
-           document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
         })
         .catch(error => console.error('Error loading footer:', error));
     </script>
+
 
 </body>
 </html>
