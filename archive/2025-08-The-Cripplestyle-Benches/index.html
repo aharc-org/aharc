@@ -127,17 +127,22 @@
     </section>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
   </main>
-  <footer>
-    <div class="item-footer">
-        <p><strong>Website under development</strong></p>
-    </div>
-    <div class="item-footer">        
-      <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
-    </div>
-    <div class="item-footer">
-        <p>This is a test page and not intended for public use. Reference: aharc</p>
-    </div>
-  </footer>
+    <footer>
+      <div id="footer-placeholder">
+        <div class="item-footer">
+          <p>© 2025 Alderholt Archives Ref: ns</p> <!-- fallback content -->
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
 </body>
 </html>
 
