@@ -368,6 +368,76 @@
 
 /* End multi column */
 
+
+
+/* Catalogue */
+    .catalogue-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; /* main axis = horizontal */
+        align-items: center ;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .catalogue-item{
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+/* End Catalogue */
+
+/* Spaced list */
+    /* Vertical list — extra space between items, no underlines on links */
+    ul.spaced-list {
+      /* list-style: none;       /* remove bullets if you want */
+      padding: 20px;
+      margin: 1rem;
+    }
+    ul.spaced-list li {
+      margin: 0 0 1rem 0;     /* bottom spacing between items */
+    }
+    ul.spaced-list a {
+      text-decoration: none;  /* remove underline */
+      font-size: 1.25rem;   /* increase text size (adjust as needed) */
+      /*color: inherit;         /* keep link colour same as surrounding text */
+    }
+
+    ul.spaced-list a:hover { 
+        color: #136;
+        font-weight:700;
+        
+    }
+
+    /* Horizontal inline list with gaps */
+    ul.inline-spaced {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;              /* space between items */
+      align-items: center;
+    }
+    ul.inline-spaced a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Accessibility: keep a clear focus indication for keyboard users */
+    ul.spaced-list a:focus,
+    ul.inline-spaced a:focus {
+      outline: 2px solid Highlight; /* visible focus ring */
+      outline-offset: 2px;
+    }
+
+
+/* End Spaced list */
+
 /* Single contact Column */
     .container-contact {
         display: flex;
