@@ -1,5 +1,5 @@
 
-/*Framework v2.00 articles 2025-10-13 */
+/*Framework v2.01 articles 2025-11-26 */
 /*based on 1.04 gFcare of 2025-06-29 */
     /* montserrat-regular - latin */
     @font-face {
@@ -53,11 +53,13 @@
     }
 
     p {
-        font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem);
+        font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem); /* agressive */
+        /* font-size: clamp(1.1rem, 1vw + 1rem, 1.25rem); /* milder */
         line-height: 1.6;
-        margin: 0 auto 0.5em;
-        /*max-width: 65ch; /* about 65 characters per line */
-        text-wrap: balance; 
+        margin: 0 auto 0.5em; /* top lr bottom */
+        /*max-width: 65ch; /* consider */
+        text-wrap: normal; /* or remove if you prefer */
+        /*text-wrap: balance; /* may cause extreme line shortening */
     }
 
     .larger-text {
@@ -89,14 +91,14 @@
         width: 85vw; 
         max-width: 900px; /* Keeps sections from being too wide */
         background-color: white;
-        padding: 50px;
+        padding: 32px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         box-sizing: border-box; /* Ensure padding is included in width */
     }
 
     .content-item figure {
         text-align: center;
-        margin: 1.5rem 0; /* top&botto|l&ṛ| */   
+        margin: 1.5rem 0; /* top&bottom l&ṛ */   
     }
 
     .content-item img {
@@ -112,6 +114,10 @@
         font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
         color: #555;
         font-style: italic;
+    }
+
+    .content-item p {
+        max-width: 65ch; /* consider using globally */
     }
 
     .content-item li {
@@ -295,8 +301,6 @@
         display: none !important;
     }
 
-
-
     /* End Pagefind */
 
 
@@ -319,7 +323,7 @@
 
     .intro-item {
         flex: 1 1 calc(33.33% - 20px);
-        max-width: 768px;
+        max-width: 768px; /*Consider 900px */
         background-color: white;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -329,6 +333,7 @@
 
     .intro-item p {
         max-width: 640px;        /* fixed readable line width */
+        /*max-width: 65ch; /* consider using globally */
         margin: 0 auto;          /* centered below image */
         text-align: justify;     /* variable word spacing */
         text-justify: inter-word;
@@ -419,28 +424,6 @@
         font-weight:700;
         
     }
-
-    /* Horizontal inline list with gaps */
-    ul.inline-spaced {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;              /* space between items */
-      align-items: center;
-    }
-    ul.inline-spaced a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Accessibility: keep a clear focus indication for keyboard users */
-    ul.spaced-list a:focus,
-    ul.inline-spaced a:focus {
-      outline: 2px solid Highlight; /* visible focus ring */
-      outline-offset: 2px;
-    }
-
 
 /* End Spaced list */
 
