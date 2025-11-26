@@ -56,7 +56,7 @@
         font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem);
         line-height: 1.6;
         margin: 0 auto 0.5em;
-        max-width: 65ch; /* about 65 characters per line */
+        /*max-width: 65ch; /* about 65 characters per line */
         text-wrap: balance; 
     }
 
@@ -87,9 +87,9 @@
 
     .content-item{
         width: 85vw; 
-        max-width: 1200px; /* Keeps sections from being too wide */
+        max-width: 900px; /* Keeps sections from being too wide */
         background-color: white;
-        padding: 20px;
+        padding: 50px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         box-sizing: border-box; /* Ensure padding is included in width */
     }
@@ -108,11 +108,17 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-     .content-item figcaption {
+    .content-item figcaption {
         font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
         color: #555;
         font-style: italic;
     }
+
+    .content-item li {
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+        margin-bottom: 0.6rem;
+    }
+
 
     .content-item blockquote {
         width: 95%;                /* Makes blockquote wider on all screens */
@@ -124,7 +130,7 @@
         font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
         font-style: italic;
         box-sizing: border-box;
-}
+    }
 
 
 /*End content*/
