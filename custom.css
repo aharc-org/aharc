@@ -1,0 +1,621 @@
+
+/*Framework v2.01 articles 2025-11-26 */
+/*based on 1.04 gFcare of 2025-06-29 */
+    /* montserrat-regular - latin */
+    @font-face {
+        font-display: swap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2'); 
+    }
+    /* montserrat-italic - latin */
+    @font-face {
+        font-display: swap; 
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: 400;
+        src: url('../assets/fonts/montserrat-v29-latin-italic.woff2') format('woff2'); 
+    }
+    /* montserrat-700 - latin */
+    @font-face {
+        font-display: swap; 
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../assets/fonts/montserrat-v29-latin-700.woff2') format('woff2'); 
+    }
+
+    @font-face {
+      font-display: swap; 
+      font-family: 'ManufacturingConsent';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype'); 
+    }    
+
+    html, body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        background-color: ivory;
+    }
+
+/* Default */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5 {
+        text-align: center;
+    }
+
+    p {
+        font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem); /* agressive */
+        /* font-size: clamp(1.1rem, 1vw + 1rem, 1.25rem); /* milder */
+        line-height: 1.6;
+        margin: 0 auto 0.5em; /* top lr bottom */
+        /*max-width: 65ch; /* consider */
+        text-wrap: normal; /* or remove if you prefer */
+        /*text-wrap: balance; /* may cause extreme line shortening */
+    }
+
+    .larger-text {
+        font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box; /* consistent box sizing */
+    }
+
+    
+/* End Default*/  
+
+
+
+
+/*Content*/
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: clamp(10px, 4vw, 20px);
+    }
+
+
+    .content-item {
+        width: clamp(85vw, 95vw, 900px);
+        padding: clamp(12px, 4vw, 32px);
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+
+
+    .content-item figure {
+        text-align: center;
+        margin: 1.5rem 0; /* top&bottom l&ṛ */   
+    }
+
+    .content-item img {
+        max-width: 100%; /* % not vw to respect container width */
+        height: auto; /* based on width no distortion */
+        display: block;   /*to allow centering */
+        margin: 3rem auto 1.5rem; /* top|l&ṛ|bottom */   
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .content-item figcaption {
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+        color: #555;
+        font-style: italic;
+    }
+
+    .content-item p {
+        max-width: 65ch; /* consider using globally */
+    }
+
+    .content-item li {
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+        margin-bottom: 0.6rem;
+    }
+
+
+    .content-item blockquote {
+        width: 95%;                /* Makes blockquote wider on all screens */
+        max-width: 600px;           /* Set a sensible upper limit for desktops */
+        background: honeydew;
+        border-left: 4px solid #ccc;
+        padding: 0.5em 1em;
+        margin: 1em auto;
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+        font-style: italic;
+        box-sizing: border-box;
+    }
+
+
+/*End content*/
+
+
+    .top-bar {
+        color: black;
+        padding: 10px 0 0;             /* Small top padding */
+        display: flex;
+        justify-content: space-between; /* Horizontal spacing */
+        align-items: center;            /* Center items vertically */
+        max-width: 900px;               /* Single boxed content */
+        margin: 0 auto;                 /* Center container horizontally */
+    }
+
+    .top-bar .call {
+        text-decoration: none;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
+        font-weight: bold;
+        font-style: italic;
+        color: #77949C;
+        margin-left: auto;  /* Pushes this flex item to the right */
+        margin-right: 20px; /* Optional right margin */
+    }
+
+
+    .top-bar .call:hover {
+        color: darkblue;
+    }
+
+
+    header {
+        color: black;
+        padding: 10px 0 0 ;             /* Small top padding */
+        display: flex;
+        /*justify-content: space-between; /* Horizontal spacing */
+        justify-content: center; /* Center all children spacing */
+        align-items: center;            /* Center items vertically */
+        max-width: 900px;               /* Single boxed content */
+        margin: 0 auto;                 /* Center container horizontally */
+
+    }
+
+    header .logo {
+        /* margin-left: 20px; */
+        position: absolute;        /* Take logo out of flex flow */
+        left: 20px;       
+    }
+
+    header .site-title {
+        font-family: "ManufacturingConsent", serif;
+        font-weight: 400;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    header .site-title-catalogue {
+        font-family: "ManufacturingConsent", serif;
+        font-weight: 400;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    header .strapline {
+        text-align: center;
+        font-style: italic;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
+        margin-right: 20px;  /* Push email link 20px away from right edge */
+    }
+
+    header .mobile-strapline {
+        display: none;
+    }
+
+    header .instagram-icon {
+        height: 50px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;               /* allow items to wrap to new lines */
+        background-color: seagreen;
+        justify-content: center;       /* horizontal spacing */
+        padding: 10px 0;               /* top and bottom */
+        max-width: 900px;              /* single column boxed content */
+        margin: 0 auto;                /* center container horizontally */
+    }
+
+    nav a {
+        color: lawngreen;
+        padding: 0 15px;               /* left and right spacing */
+        text-decoration: none;         /* remove underline */
+        font-weight: bold;
+        white-space: nowrap;           /* optional: prevent text itself from breaking */
+    }
+
+    nav a:hover {
+        color: white;
+    }
+          
+
+/* Hero image */
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* adjust as required*/ 
+    }
+
+    .hero-image::before {
+        content: "";
+        display: block;
+        width: 100%;         /* Ensures it stretches to container width */
+        padding-top: 25%;    /* 4:1 aspect ratio  try 20% for 5:1*/
+        background: #FFD760; /* Placeholder color */
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        position: relative;       /* Needed for absolute positioning */
+        width: 100%;              /* Ensure the container takes up the intended space */
+        max-width: 900px;         /* Match nav and header. Prevent it from getting too large on big screens */
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute; 	/* ensures image fills hero-image container */
+        top: 0;			/* ensures image fills hero-image container */
+        left: 0;		/* ensures image fills hero-image container */
+    }
+
+/* End hero */
+
+/* Pagefind Search Override*/
+
+   .myPagefind-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myPagefind-item {
+        width:100%;
+        max-width: 768px;
+        background-color: honeydew;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+
+    #search .pagefind-ui__result-title {
+        background-color: honeydew;
+    }
+    
+    #search .pagefind-ui__result-tag {
+        font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem);
+        background-color: white; /* off white background */
+        padding: 0.5rem;           /* optional padding */
+    }
+
+    #search .pagefind-ui__result-excerpt { /*hide standard snippet */
+        display: none !important;
+    }
+
+    /* End Pagefind */
+
+
+    /* Intro */
+
+    .intro-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        width: 80vw;
+        max-width: 768px;
+        font-style: italic;
+        font-size: clamp(1rem, 0.8vw + 0.9rem, 1.2rem);
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .intro-item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 768px; /*Consider 900px */
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        text-align: center;  /* keep image centered */
+    }
+
+    .intro-item p {
+        max-width: 640px;        /* fixed readable line width */
+        /*max-width: 65ch; /* consider using globally */
+        margin: 0 auto;          /* centered below image */
+        text-align: justify;     /* variable word spacing */
+        text-justify: inter-word;
+    }
+
+    .intro-item img {
+        display: block;
+        margin: 2rem auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+/* End intro */
+
+/* Multi column */   
+    .feature-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; /* main axis = horizontal */
+        align-items: center ;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .feature-item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box; /* Ensure padding is included in width */
+        }
+ 
+    .feature-item img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+/* End multi column */
+
+
+
+/* Catalogue */
+    .catalogue-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; /* main axis = horizontal */
+        align-items: center ;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .catalogue-item{
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+/* End Catalogue */
+
+/* Spaced list */
+    /* Vertical list — extra space between items, no underlines on links */
+    ul.spaced-list {
+      /* list-style: none;       /* remove bullets if you want */
+      padding: 20px;
+      margin: 1rem;
+    }
+    ul.spaced-list li {
+      margin: 0 0 1rem 0;     /* bottom spacing between items */
+    }
+    ul.spaced-list a {
+      text-decoration: none;  /* remove underline */
+      font-size: 1.25rem;   /* increase text size (adjust as needed) */
+      /*color: inherit;         /* keep link colour same as surrounding text */
+    }
+
+    ul.spaced-list a:hover { 
+        color: #136;
+        font-weight:700;
+        
+    }
+
+/* End Spaced list */
+
+/* Single contact Column */
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        padding: 20px;
+    }
+
+    .item-contact {
+        width: 80vw; 
+        max-width: 768px; /* Keeps sections from being too wide */
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+
+   input[type="text"], input[type="email"], input[type="tel"], textarea {
+        width: 95%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+    }
+
+    label, textarea {
+        display: block; /* force new lines between items*/
+        /*margin-bottom: 10px; /* optional spacing */
+    }
+
+    #email {
+        max-width: 600px;
+    }
+
+    #phone {
+        max-width: 200px;
+    }
+
+    #callback {
+        max-width: 300px;
+    }
+
+    button[type="submit"] {
+        background-color: #666;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 25px;
+        margin-top:20px;
+    }
+    button[type="submit"]:hover {
+        background-color: #333;
+    }
+    label.required:after {
+        content: " *";
+        color: red;
+    }
+    .red-asterisk::before {
+        content: "* ";
+        color: red;
+    }
+
+    .cf-turnstile {
+        overflow: hidden;
+        display: block;
+    }
+
+
+/* End Single contact column */
+
+/* Back to top */
+    .back-to-top {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        padding: 10px 16px;
+        font-size: 2rem;
+        line-height:0.8rem;
+        font-weight: bold;
+        color: lawngreen;
+        background: seagreen;
+        border-radius: 6px;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        z-index: 1000;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+    }
+
+    .back-to-top:hover, .back-to-top:focus {
+        opacity: 1;
+        color: white;
+        background: seagreen;
+        outline: 2px solid #fff;
+    }
+/* End back to top */
+
+/* Footer */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color:lightpink;
+        align-items: center;        /* Center items horizontally */
+        gap: 20px;
+        padding: 10px 0px;          /* Top and Bottom */
+        max-width: 900px;           /* Single column boxed content */
+        margin: 20px auto;             /* Center container horizontally */
+
+    }
+    
+    footer .item-footer {
+        width: 80vw;
+        color: black;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+/* End footer */
+
+
+/* Media queries */
+
+    @media only screen and  (max-width: 900px) {
+
+        .feature-container {
+            flex-direction: column;
+            align-items: center;
+         }
+
+        .feature-item {
+            width: 90%; /* Adjust width to ensure it is properly centered */
+            max-width: 600px;
+        } 
+    } 
+
+    @media only screen and (max-width: 768px) {
+
+        .top-bar .call { /*Check if needed on gFcare */
+            font-size: clamp(0.9rem, 0.8vw + 0.8rem, 1rem);
+        }
+
+        header {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+         }
+        header .logo {
+            margin-left: 0;
+        }
+
+        header .mobile-strapline {
+            display: block; /* Show on mobile */
+        }
+
+        header .strapline {
+            display: none; /* Hide on mobile */
+        }
+
+        header .instagram-icon  {
+            display: none; /* Hide on mobile */
+        }            
+
+        .intro-title {
+          /* font-size: 0.7em;   Change font size  on mobile */
+        }            
+        
+        .intro-icon {
+            display: block; /* Display on mobile */
+            padding:20px;
+        }
+
+
+        .cf-turnstile {
+            width: 200px; 
+        }
+    }  
+/* end media queries */
+
+
+
+
+
