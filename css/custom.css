@@ -80,21 +80,23 @@
 
 /*Content*/
 
-    .content-container{
-        display: flex;
+    .content-container {
+        max-width: 900px;              /* single column boxed content */
+        margin: 0 auto; 
+        display: flex;        
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        padding: 20px;
+        align-items: center;
     }
 
-    .content-item{
-        width: 85vw; 
-        max-width: 900px; /* Keeps sections from being too wide */
+
+    .content-item {
+        width: clamp(85vw, 95vw, 900px);
+        padding: clamp(5px, 1vw, 32px);
         background-color: white;
-        padding: 32px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-        box-sizing: border-box; /* Ensure padding is included in width */
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-sizing: border-box;
     }
+
 
     .content-item figure {
         text-align: center;
@@ -191,6 +193,14 @@
         font-weight: 400;
         font-size: 4rem;
         text-align: center;
+    }
+
+    header .site-title-catalogue {
+        font-family: "ManufacturingConsent", serif;
+        font-weight: 400;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     header .strapline {
