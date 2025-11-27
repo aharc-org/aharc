@@ -140,6 +140,33 @@
         box-sizing: border-box;
     }
 
+     
+
+    .content-item .table-wrapper { /* Wrapper for responsive scrolling */
+        overflow-x: auto;       /* horizontal scroll if table too wide */
+    }
+
+    /* Table styling */
+    .content-item table {
+        width: 95%;
+        max-width: 600px;
+        margin: 1em auto;
+        border-left: 4px solid #ccc;
+        background-color: honeydew;
+        border-collapse: collapse;   /* prevents double borders */
+        box-sizing: border-box;
+        font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+    }
+
+    /* Cell styling to mimic border="1" */
+    .content-item table th,
+    .content-item table td {
+        border: 1px solid black;     /* cell borders */
+        padding: 0.5em 1em;
+        text-align: left;            /* optional: default alignment */
+    }
+
+
 
 /*End content*/
 
