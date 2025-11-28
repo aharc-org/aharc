@@ -1,5 +1,5 @@
 
-/*Framework v2.01 articles 2025-11-26 */
+/*Framework v2.01 articles 2025-11-28 */
 /*based on 1.04 gFcare of 2025-06-29 */
     /* montserrat-regular - latin */
     @font-face {
@@ -566,7 +566,7 @@
     footer {
         display: flex;
         flex-direction: column;
-        background-color:lightpink;
+        background-color:seagreen;
         align-items: center;        /* Center items horizontally */
         gap: 20px;
         padding: 10px 0px;          /* Top and Bottom */
@@ -577,7 +577,7 @@
     
     footer .item-footer {
         width: 80vw;
-        color: black;
+        color: white;
         text-align: center;
         padding: 20px 0;
     }
