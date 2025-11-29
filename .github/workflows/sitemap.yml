@@ -20,4 +20,4 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://alderholt.github.io/alderholt/
+        base-url-path: https://alderholt.github.io/alderholtarchives/
