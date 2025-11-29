@@ -1,0 +1,23 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Generate the sitemap
+      id: sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://alderholtarchives.org.uk/
