@@ -1,5 +1,8 @@
 name: Generate sitemap
 
+permissions:
+  contents: write  # This lets the workflow push changes
+  
 on:
   push:
     branches: [ main ]
