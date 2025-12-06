@@ -1,5 +1,5 @@
 
-/*Framework v2.01 articles 2025-11-28 */
+/*Framework v2.02 articles 2025-12-06 */
 /*based on 1.04 gFcare of 2025-06-29 */
     /* montserrat-regular - latin */
     @font-face {
@@ -122,10 +122,19 @@
         max-width: 65ch; /* consider using globally */
     }
 
-    .content-item li {
+    .content-item ul {
+        max-width: 65ch;
+        margin: 1rem auto;      /* center the ul like the paragraph */
+        padding-left: 0;        /* remove browser’s default indent */
         font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+        line-height: 1.6;
+    }
+
+    .content-item li {
+        margin-left: 1.2rem;    /* manual indent so bullets align with text */
         margin-bottom: 0.6rem;
     }
+
 
 
     .content-item blockquote {
