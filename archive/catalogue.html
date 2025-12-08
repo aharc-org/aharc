@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alderholt Archives - Catalogue</title>
@@ -7,33 +8,26 @@
 </head>
 
 <body>
+<a id="top"></a>
 
-  <a id="top"></a>
+<header>
+  <div class="site-title-catalogue">Alderholt Archives</div>
+</header>
 
-  <header>
-    <div class="site-title-catalogue">Alderholt Archives</div>
-  </header>
+<nav>
+  <a href="../index.html" aria-current="page">Home</a>
+  <a href="search.html">Search</a>
+  <a href="../contact.html">Contact</a>
+</nav>
 
-  <nav>
-      <a href="../index.html" aria-current="page">Home</a>
-      <a href="search.html">Search</a>
-      <a href="../contact.html">Contact</a>
-  </nav>
+<main>
+<section class="catalogue-container">
+<section class="catalogue-item">
 
-  <main>
-
-    <section class="catalogue-container">
-      <section class="catalogue-item">
-
-        <h2>Catalogue</h2>
-        <p>
-        This archive contains articles that first appeared in the Alderholt Parish Magazine. New pieces are added regularly.
-        </p>
-        <p>
-        Use the <a href="search.html">Search</a> function or browse by date below.
-        </p>
-
-        <hr>
+<h2>Catalogue</h2>
+<p>This archive contains articles that first appeared in the Alderholt Parish Magazine.</p>
+<p>Use the <a href="search.html">Search</a> function or browse below.</p>
+<hr>
 <h4>2020</h4>
 <ul class="spaced-list">
   <li><a href="2020-11-Alderholt-An-Overview/index.html">2020 Nov Alderholt An Overview</a></li>
@@ -54,6 +48,7 @@
   <li><a href="2022-08-Alderholt-Steam-Rally/index.html">2022 Aug Alderholt Steam Rally</a></li>
   <li><a href="2022-09-1st-Alderholt-Scout_Group/index.html">2022 Sep 1st Alderholt Scout_Group</a></li>
   <li><a href="2022-10-Cob/index.html">2022 Oct Cob</a></li>
+  <li><a href="2022-11-Dirk-Jacobus-Klink/index.html">2022 Nov Dirk Jacobus Klink</a></li>
 </ul>
 <h4>2024</h4>
 <ul class="spaced-list">
@@ -64,26 +59,26 @@
   <li><a href="2025-08-The-Cripplestyle-Benches/index.html">2025 Aug The Cripplestyle Benches</a></li>
 </ul>
 
-    </section>
+</section>
 
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>    
+<a href="#top" class="back-to-top" aria-label="Back to top">↑</a>    
 
-  </main>
+</main>
 
-  <footer>
-    <div id="footer-placeholder">
-      <div class="item-footer">
-        <p>© 2025 Alderholt Archives Ref: ns</p>
-      </div>
+<footer>
+  <div id="footer-placeholder">
+    <div class="item-footer">
+      <p>© 2025 Alderholt Archives Ref: ns</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    fetch('../../footer.html')
-      .then(r => r.text())
-      .then(data => document.getElementById('footer-placeholder').innerHTML = data)
-      .catch(err => console.error('Error loading footer:', err));
-  </script>
+<script>
+fetch('../../footer.html')
+  .then(r => r.text())
+  .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+  .catch(err => console.error('Error loading footer:', err));
+</script>
 
 </body>
 </html>
