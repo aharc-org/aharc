@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--generic v1 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Alderholt Archives Website Under Development</title>
+
+</head>
+<body>
+
+    <header>
+    <div class="site-title">Alderholt Archives</div>
+    </header>
+
+
+    <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="archive/2025-08-The-Cripplestyle-Benches/index.html">Latest</a>
+        <a href="archive/catalogue.html">Catalogue</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+    <section class="intro-container">
+        <div class="intro-text">
+            <h2>A series of historical articles</h2>
+        </div> 
+        <div  class="intro-item">
+            <div class="intro-image">
+                <img src="assets/images/Alderholt-Village.webp" 
+                     alt="Alderholt"
+                     loading="eager"
+                     fetchpriority="high"
+                >
+            </div>
+            <p>Alderholt is a large village and civil parish nestled in the east of Dorset but situated just 3 miles (4.8 km) west of Fordingbridge in Hampshire. The parish includes the small hamlets of Crendell and Cripplestyle and was home to 3,195 residents at the time of the 2021 census. 
+            </p>
+            <p>This Historical Archive preserves the history of Alderholt through a collection of articles written by local resident Adrian King and originally published in the Parish Magazine.
+            </p>
+ 
+            <h3>Adrian writes</h3>
+
+            <blockquote>
+                <p>Some time ago, while she was still editor, Jean Mortimer suggested that I should write some articles for the Alderholt Parish News. I went away for a while to think about what I should write and what the articles should be called.</p>
+
+                <p>Slowly during the first Covid Lockdown of 2020 the ideas formed of the name for the series and the content of the articles. The first article, “A Village Overview,” was printed in the November 2020 Parish News – by that time Holly Botto was the magazine editor.</p>
+
+                <p>The picture header of each article is a watercolour of an old postcard showing Manor Farm and the village pond in the Home Farm area of Sandleheath Road.</p>
+
+                <p>Previously called Alderholt Street, it was where the village was originally situated before the land to the south was enclosed and the village centre shifted.</p>
+
+                <p>A big thank you to Janet Isaac who painted the watercolour for me.</p>
+
+                <p>The advantage is that previously the articles were printed in monochrome, you will now see them in colour – I hope that you enjoy reading them as much as I enjoyed writing them!</p>
+
+                <p><i>Adrian King</i></p>
+            </blockquote>
+        </div>
+    </section>
+ 
+
+
+
+    </main>
+
+
+    <footer>
+      <div id="footer-placeholder">
+        <div class="item-footer">
+          <p>© 2025 Alderholt Archives</p> <!-- fallback content -->
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+
+</body>
+</html>
