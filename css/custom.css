@@ -145,16 +145,13 @@
         text-align: center;
     }
 
-    /* Specific narrow images */
-    .content-item.narrow img {
-      max-width: 600px;
-      width: 100%;  /* shrinks on mobile */
+    /* Specific narrow images and captions */
+    .content-item.narrow img,
+    .content-item.narrow figcaption {
+        max-width: 600px;
+        width: 100%;  /* shrinks on mobile */
     }
 
-    .content-item.narrow figcaption {
-      max-width: 600px;
-      width: 100%;  /* shrinks on mobile */
-    }
 
     .content-item p {
         max-width: 65ch; /* consider using globally */
