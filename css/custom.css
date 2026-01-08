@@ -151,15 +151,17 @@
 
     /* Narrow image blocks */
     .content-item.narrow figure {
-        max-width: 600px;
+        max-width: 70%;
+        margin: 3rem auto 1.5rem;
     }
 
 
-        .content-item p {
-            max-width: 65ch;
-            margin-left: auto;
-            margin-right: auto;
-        }
+
+    .content-item p {
+        max-width: 65ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .content-item ul {
         max-width: 65ch;
@@ -643,7 +645,7 @@
 
 /* Media queries */
 
-    @media only screen and  (max-width: 900px) {
+    @media (max-width: 900px) {
 
         .feature-container {
             flex-direction: column;
@@ -656,7 +658,7 @@
         } 
     } 
 
-    @media only screen and (max-width: 768px) {
+    @media (max-width: 768px) {
 
         .top-bar .call { /*Check if needed on gFcare */
             font-size: clamp(0.9rem, 0.8vw + 0.8rem, 1rem);
@@ -697,6 +699,16 @@
             width: 200px; 
         }
     }  
+
+    @media (min-width: 768px) {
+        .content-item.narrow figure {
+            max-width: 540px; /* 70% of 768 */
+            %
+        }
+    }
+
+}
+
 /* end media queries */
 
 
