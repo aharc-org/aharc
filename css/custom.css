@@ -139,11 +139,11 @@
         margin: 0 auto 1.5rem;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        object-fit: contain;   /* optional: ensures image fits nicely if constrained */
+        object-fit: contain;   /* ensures it fits inside max-height/max-width */
     }
 
 
-    /* Captions */
+    /* Captions (centered, responsive) */
     .content-item figcaption {
         max-width: 700px;
         margin: 0 auto;
@@ -153,13 +153,26 @@
         text-align: center;
     }
 
-    /* Narrow image blocks */
+    /* Narrow image blocks (portrait) */
     .content-item.narrow figure {
-        max-width: 70%;
-        margin: 3rem auto 1.5rem;
+        max-width: 70%;           /* mobile: 70% of container */
+        margin: 3rem auto 1.5rem; /* vertical rhythm */
     }
 
+        /* Side-by-side image container */
+    .content-item.side-by-side {
+        display: flex;                       /* horizontal alignment */
+        gap: 1rem;                           /* spacing between images */
+        justify-content: center;
+        flex-wrap: wrap;                     /* wrap on small screens */
+        margin: 3rem auto 1.5rem;           /* same vertical rhythm */
+    }
 
+    .content-item.side-by-side img {
+        max-width: 49%;                      /* each image takes half */
+        height: auto;                        /* maintain aspect ratio */
+        object-fit: cover;                   /* crop if needed to match height visually */
+    }
 
     .content-item p {
         max-width: 65ch;
@@ -704,13 +717,55 @@
         }
     }  
 
-    @media (min-width: 768px) {
-        .content-item.narrow figure {
-            max-width: 540px; /* 70% of 768 */
-            %
-        }
+/* =============================== */
+/* Side-by-side image pair (final) */
+/* =============================== */
+
+.content-item.side-by-side {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem auto 1.5rem;   /* matches other content rhythm */
+    max-width: 900px;           /* aligns with content container */
+}
+
+/* Each figure behaves as half of a single image */
+.content-item.side-by-side figure {
+    flex: 1 1 0;
+    max-width: 420px;           /* hard limit prevents layout blowout */
+    margin: 0;
+}
+
+/* Images themselves */
+.content-item.side-by-side img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;           /* desktop: never dominate screen */
+    object-fit: contain;
+}
+
+/* Captions stay aligned */
+.content-item.side-by-side figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* ---------- Mobile behaviour ---------- */
+@media (max-width: 767px) {
+    .content-item.side-by-side {
+        flex-direction: column;
+        gap: 1rem;
     }
 
+    .content-item.side-by-side figure {
+        max-width: 100%;
+    }
+
+    .content-item.side-by-side img {
+        max-height: 70vh;       /* critical: avoids text displacement */
+    }
 }
 
 /* end media queries */
