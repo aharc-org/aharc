@@ -132,12 +132,16 @@
     /* Images */
     .content-item img {
         display: block;
-        max-width: 100%;
-        height: auto;
+        max-width: 100%;       /* keeps image within container width */
+        max-height: 90vh;     /* limits height to viewport */
+        width: auto;           /* keeps aspect ratio */
+        height: auto;          /* keeps aspect ratio */
         margin: 0 auto 1.5rem;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        object-fit: contain;   /* optional: ensures image fits nicely if constrained */
     }
+
 
     /* Captions */
     .content-item figcaption {
