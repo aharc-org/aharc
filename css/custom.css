@@ -52,8 +52,8 @@
         text-align: center;
     }
 
-    h3, h4, h5 {
-        margin: 2.5em 0 0em;
+     h3, h4, h5 {
+        margin-top: 2.5em;
     }
 
 
@@ -165,39 +165,39 @@
 
     /* Narrow image blocks (portrait) */
     .content-item.narrow figure {
-        max-width: 70%;           /* mobile: 70% of container */
+        max-width: 50%;           /* mobile: 50% of container */
         margin: 3rem auto 1.5rem; /* vertical rhythm */
     }
 
-        /* Side-by-side image container */
-.content-item.side-by-side {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    align-items: stretch;   /* critical */
-    margin: 3rem auto 1.5rem;
-}
+            /* Side-by-side image container */
+    .content-item.side-by-side {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        align-items: stretch;   /* critical */
+        margin: 3rem auto 1.5rem;
+    }
 
-.content-item.side-by-side figure {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-    margin: 0;
-}
+    .content-item.side-by-side figure {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+        margin: 0;
+    }
 
 
-.content-item.side-by-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;     /* NO cropping */
-    margin: 0;
-}
+    .content-item.side-by-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;     /* NO cropping */
+        margin: 0;
+    }
 
-.content-item.side-by-side figcaption {
-    margin-top: 0.75rem;
-    text-align: center;
-    align-self: end;         /* baseline alignment */
-}
+    .content-item.side-by-side figcaption {
+        margin-top: 0.75rem;
+        text-align: center;
+        align-self: end;         /* baseline alignment */
+    }
 
 
     .content-item p {
