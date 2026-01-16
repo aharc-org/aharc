@@ -130,6 +130,7 @@
         background-color: #fff;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         box-sizing: border-box;
+        margin: 3rem auto 1.5rem;
     }
 
     /* Figures */
@@ -182,8 +183,8 @@
         display: grid;
         grid-template-rows: 1fr auto;
         height: 100%;
-        margin: 0;
-    }
+        margin: 1.5em 0 0em;
+      }
 
 
     .content-item.side-by-side img {
@@ -219,8 +220,6 @@
         margin-bottom: 0.6rem;
     }
 
-
-
     .content-item blockquote {
         width: 95%;                /* Makes blockquote wider on all screens */
         max-width: 600px;           /* Set a sensible upper limit for desktops */
@@ -237,7 +236,6 @@
     .content-item .table-wrapper { /* Wrapper for responsive scrolling */
         overflow-x: auto;       /* horizontal scroll if table too wide */
     }
-
 
     .content-item table {
         width: 95%;
@@ -265,7 +263,6 @@
     }
 
 /*End content*/
-
 
     .top-bar {
         color: black;
