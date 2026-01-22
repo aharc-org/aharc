@@ -196,6 +196,7 @@
 
     .content-item.side-by-side figcaption {
         margin-top: 0.75rem;
+        margin-bottom: 1.75rem;
         text-align: center;
         align-self: end;         /* baseline alignment */
     }
