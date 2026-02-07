@@ -10,4 +10,4 @@ One article has its own css unrelated to the base or custom css files
 large-table-v1.0.0.css is duplicated as large-table.css  
 ### Lats Updated files
 
-2020-11-Alderholt-An-Overview
+All index.html done
