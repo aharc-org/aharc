@@ -1,0 +1,45 @@
+/*Oakwood ltd Framework v3.0.0  2026-02-25 */
+/* Brand: Variables declaration */
+
+/* General */
+:root {
+
+    --brand-primary: seagreen;   /* Design tokens */
+    --brand-accent: lightseagreen;
+
+    --font-brand: ManufacturingConsent, serif;
+
+    --text-dark: black;
+    --text-medium: lightslategrey;
+    --text-light: white;
+
+    --bg-outer: ivory;
+    --bg-inner: white;
+    --bg-blockquote-table: honeydew;
+
+    --bg-nav-footer: seagreen;
+    --text-nav:lawngreen;
+    --text-nav-hover:white;
+
+    --bg-button: seagreen;
+    --text-button:lawngreen;
+    --text-button-hover:white;
+    --button-radius: 25px;
+
+    --link-color: blue;
+    --link-hover-color: navy;
+
+    --bg-card-one: #d8f2ee;
+    --bg-card-two: #cde8e4;
+
+}
+
+/* Fonts */
+
+@font-face {
+    font-display: swap;
+    font-family: 'ManufacturingConsent';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype');
+}  /* Add this */

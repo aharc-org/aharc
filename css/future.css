@@ -1,0 +1,36 @@
+
+try on alderholt custom 
+
+in     .content-item {
+ margin: 3rem auto 1.5rem; make equal?
+
+:root {
+  /* Base unit (20px = 1.25rem ) */
+  --space-unit: 1.25rem;
+  
+  /* Complete spacing scale */
+  --space-0:    0;
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-1:    var(--space-unit);      /* 20px base */
+  --space-2:    calc(var(--space-unit) * 1.5);  /* 30px */
+  --space-3:    calc(var(--space-unit) * 2);    /* 40px */
+  --space-4:    calc(var(--space-unit) * 3);    /* 60px */
+  --space-5:    calc(var(--space-unit) * 4);    /* 80px */
+  
+  /* Site constraints */
+  --site-max-width: clamp(900px, 90vw, 1200px);  /* Responsive max */
+  
+  /* Responsive padding (fixed your inconsistent units) */
+  --spacing-inline: clamp(1rem, 5vw, 4rem);
+  --spacing-block: clamp(1.25rem, 4vw, 3rem);    /* Now rem/fluid */
+
+
+  a:focus {
+  outline: none;  /* Remove browser default */
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;  /* Space from border */
+}
