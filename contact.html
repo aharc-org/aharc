@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--aharc using css v3.0 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Alderholt Archives</title>
+
+</head>
+<body>
+
+    <header>
+    <div class="site-title">Alderholt Archives</div>
+    </header>
+
+
+    <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="archive/catalogue.html">Catalogue</a>
+    </nav>
+
+    <main>
+
+    <section class="intro-container">
+        <div class="intro-text">
+            <h2>Contact Us</h2>
+        </div> 
+        <div  class="intro-item">
+            <p>If you have interesting historical information about Alderholt, or anything else please complete the form below
+            </p>
+
+            <p>Adrian will get back to you as soon as he can.
+            </p>
+            
+        </div>
+   </section>
+
+    <div class="container-contact">        <section id="contact" class="item-contact">
+            <form 
+              action="https://submit-form.com/ju20JqJv7" method="POST" 
+            >
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
+
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+
+                <label for="phone" class="required">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required aria-required="true">
+
+                <label for="callback" class="required">Contact preference</label>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text" required aria-required="true">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Optional Message"></textarea>
+                
+                <p class="red-asterisk">Required</p>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAACDcUyyvfoM-Aad0" data-callback="javascriptCallback" aria-label="Captcha Verification" ></div>                 
+                <button type="submit">Send
+            </form>
+          </section>
+        </div>   
+
+
+    </main>
+
+<a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <footer>
+      <div id="footer-placeholder">
+        <div class="item-footer">
+          <p>© 2025 Alderholt Archives Ref: ns</p> <!-- fallback content -->
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    <script 
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>
+    </script>
+    <script data-goatcounter="https://georginafootcare.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js">
+    </script>
+
+
+</body>
+</html>
