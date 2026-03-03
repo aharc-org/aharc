@@ -10,7 +10,14 @@
     --heading-align: center;
 }
 
+    .header-right {
+        text-align: right    }
+
 @media (max-width: 768px) {
+    .header-center {
+        grid-column: 1;
+        text-align: center;
+    }
 
     .header-right {
         display: none;        /* Hide Instagram icon */
