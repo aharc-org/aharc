@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alderholt Archives< Contact us.">
+    <title>Contact Alderholt Archives<</title>
+    <link rel="stylesheet" href="css/1-settings.css">
+    <link rel="stylesheet" href="css/2-base.css">
+    <link rel="stylesheet" href="css/3-components.css">
+    <link rel="stylesheet" href="css/4-utilities.css">
+    <link rel="stylesheet" href="css/5-custom.css">
+</head>
+<body>
+
+<!-- Top bar (if needed) -->
+
+<!-- Header -->
+<header class="site-header u-mb-sm">
+    <div class="header-center site-title">
+        Alderholt Archives
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="archive/catalogue.html">Catalogue</a>
+    <a href="aharc-contact.html" aria-current="page">Contact</a>
+</nav>
+
+<!-- Contact form -->
+<main>
+
+    <div class="container-contact u-mt-lg u-mb-section">
+        <div id="contact" class="item-contact">
+            <div  class="intro-item">
+                <h2>Contact Us</h2>
+                <p>If you have interesting historical information about Alderholt, or anything else please complete the form below.</p>
+                <p>Adrian will get back to you as soon as he can.
+                </p>
+            </div>
+
+
+        <form action="https://submit-form.com/I8k6ubkcd" method="POST">
+
+            <label for="name" class="form-label form-label--required u-mt-lg u-mb-xs">Name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+
+            <label for="email" class="form-label form-label--required u-mt-lg u-mb-xs">Email</label>
+            <input class="form-control" type="email" id="email" name="_replyto" placeholder="Email" autocomplete="email" required>
+
+            <label for="phone" class="form-label form-label--required u-mt-lg u-mb-xs">Phone</label>
+            <input class="form-control form-control--small" type="tel" id="phone" name="phone" placeholder="Telephone number" autocomplete="tel" required>
+
+            <label for="callback" class="form-label form-label--required u-mt-lg u-mb-xs">Contact preference</label>
+            <input class="form-control form-control--medium" type="text" id="callback" name="callback" placeholder="Phone, Email, Text Msg..." required>
+
+            <label for="message" class="form-label form-label--required u-mt-lg u-mb-xs">Message</label>
+            <textarea class="form-control" id="message" name="message" placeholder="How can I help you?" required></textarea>
+
+            <!-- Redirect after successful submission -->
+            <input type="hidden" name="_redirect" value="https://acme.com/acme-contact-success.html">
+            <input type="hidden" name="_error" value="https://acme.com/acme-contact-error.html">
+            <input type="hidden" name="_no-capture" value="true">
+
+            <p class="red-asterisk">Required</p>
+
+            <div class="cf-turnstile u-mt-lg"
+                 data-sitekey="0x4AAAAAACDcUyyvfoM-Aad0">
+            </div>
+
+            <button type="submit" id="submit-button" class="button button--submit button--medium u-mt-lg u-mb-lg" >Send</button>
+
+        </form>
+    </div>
+</div>
+
+</main>
+
+    <!-- FAB back to top -->
+    <a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+    <!-- Footer (web component) -->
+    <div class= "u-mt-lg">
+        <site-footer></site-footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/acme-main.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+
+
+</body>
+</html>

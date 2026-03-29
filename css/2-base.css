@@ -1,0 +1,104 @@
+/*  2-base.css
+    Oakwood Framework v4.1.0
+    CSS reset + bare element defaults. No classes. Copy-paste once, never touch.
+*/
+
+
+*, *::before, *::after {
+    box-sizing: border-box; /* Include padding inside elements */
+}
+
+html, body {
+    font-family: var(--font-base);
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden; /* Catch sneaky elements */
+    background: var(--bg-outer);
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    text-align: var(--title-align);
+}
+
+h3, h4, h5, h6 {
+    text-align: var(--heading-align);
+    margin-top: var(--spacing-block);
+}
+
+/* Responsive typography */
+
+h1 { font-size: 1.75em; } /* reduced .25em */
+h2 { font-size: 1.25em; } /* reduced .25em */
+h3 { font-size: 1.17em; } /* default */
+h4 { font-size: 1em ;}  /* default */
+h5 { font-size: 0.83em; } /* default */
+h6 { font-size: 0.67em; } /* default */
+
+
+p {
+    font-size: var(--font-fluid-body);
+    line-height: 1.6; /* multiplier of font size */
+    margin: 0 auto  var(--spacing-small); /* top lr bottom */
+}
+
+p.medium-text {
+    font-size: var(--font-fluid-medium);
+}
+
+p.larger-text {
+    font-size: var(--font-fluid-large);
+}
+
+a {
+    color: var(--link-color);
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover-color);
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Spaced list */
+/* Vertical list — extra space between items, no underlines on links */
+ul.spaced-list {
+     /* list-style: none;    remove bullets if you want */
+     padding: var(--spacing-large);
+     margin: var(--spacing-large);
+}
+ul.spaced-list li {
+    font-size: var(--font-fluid-medium);
+    margin: 0 0 var(--spacing-large) 0;     /* bottom spacing between items */
+}
+ul.spaced-list a {
+    text-decoration: none;  /* remove underline */
+    font-size: var(--font-fluid-medium);
+    /*color: inherit;         /* keep link colour same as surrounding text */
+}
+
+ul.spaced-list a:hover {
+    color: var(--link-hover-color);
+    font-weight:700;
+
+}
+
+/* End Spaced list */
+
+
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+}

@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;The Cripplestyle Benches</title>
 
   <meta name="publication"
@@ -11,10 +17,6 @@
   >
   <meta name="description"
       content="King Barrow is the highest hill near Cripplestyle and it became home in 2020 to a bench created by Cripplestyle poet Martin Hollister. He installed other benches along woodland paths in the area. The bench became a popular walking destination before weather damage led to its removal in 2023 shortly after Hollister’s death in December 2022." />
-
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
 </head>
 
 
@@ -60,7 +62,7 @@
 
         <p>From the Old English meaning cyning ‘king’ and beorg ‘barrow or hill.’ past forms of the name are</p>
 
-        <div class="table=wrapper">
+        <div class="table-wrapper u-mt-block u-mb-block">
         <table>
             <tr>
               <td>Kyngbor’ghe</td>
@@ -80,7 +82,7 @@
             </tr>
             <tr>
               <td>King Barrow Hill</td>
-              <td>1869 Hutch<</td>
+              <td>1869 Hutch</td>
             </tr>
           </table>
         </div>
@@ -144,7 +146,7 @@
         </figure>
 
         <h2>Michael</h2>
-        <blockquote>
+        <blockquote class="u-mb-block">
           <p>Michael the Abominable Snowman has got no mate,<br>
           In his icy cave he ponders his lonely fate,<br>
           He writes his “love wishing” letters to Heart Club columns,<br>
@@ -164,22 +166,19 @@
     </section>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
   </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+
+    <!-- FAB back to top -->
+    <a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+    <!-- Footer (web component) -->
+    <div class= "u-mt-lg">
+        <site-footer></site-footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/acme-main.js"></script>
+
+
 </body>
 </html>
-
