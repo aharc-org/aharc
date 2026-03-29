@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alderholt Archives —&nbsp;Alderholt Rifle Club</title>
-
-  <meta name="template" content= "v2.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -14,15 +17,11 @@
   <meta name="description"
       content="Alderholt Rifle Club founded in 1947 from a WWII Home Guard unit grew into a highly successful and expanding club with indoor and outdoor ranges, strong competition results, and ambitious plans for wider events. Following tighter firearms regulations after the Hungerford and Dunblane tragedies, rising safety costs and falling membership led to its eventual closure." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
 </head>
 
 
 <body>
 
-  <a id="top"></a>
 
   <header>
     <div class="site-title">Alderholt Archives</div>
@@ -130,22 +129,19 @@
     </section>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
   </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+    <!-- FAB back to top -->
+    <a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+    <!-- Footer (web component) -->
+    <div class= "u-mt-lg">
+        <site-footer></site-footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/acme-main.js"></script>
+
+
 </body>
 </html>
 
