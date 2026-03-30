@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alderholtarchives.org.uk/aharc-contact-error.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
   </url>
   <url>
     <loc>https://alderholtarchives.org.uk/aharc-contact-success.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
   </url>
   <url>
     <loc>https://alderholtarchives.org.uk/aharc-contact.html</loc>
@@ -193,7 +193,11 @@
     <lastmod>2026-03-30</lastmod>
   </url>
   <url>
+    <loc>https://alderholtarchives.org.uk/index (copy).html</loc>
+    <lastmod>2026-03-30</lastmod>
+  </url>
+  <url>
     <loc>https://alderholtarchives.org.uk/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-03-30</lastmod>
   </url>
 </urlset>

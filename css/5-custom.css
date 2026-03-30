@@ -41,6 +41,12 @@
   vertical-align: middle;
 }
 
+.intro-item blockquote {
+    width: 100%;
+    border-left: none;
+    padding: 0;
+}
+
 .site-title {
     text-align: center;
     font-size: var(--font-fluid-xlarge);
