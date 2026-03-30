@@ -18,6 +18,29 @@
     --font-fluid-xlarge: clamp(2.4rem, 3.6vw + 1.2rem, 4rem);
 }
 
+.content-container {
+    background-color: var(--bg-inner);
+
+}
+
+.content-item blockquote {
+    width: 100%;
+}
+
+
+.content-item table th,
+.content-item table td {
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
+  padding-left: var(--spacing-xsmall);
+}
+
+.content-item td.center,
+.content-item th.center {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .site-title {
     text-align: center;
     font-size: var(--font-fluid-xlarge);
@@ -111,6 +134,14 @@
   .flower-list {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
   }
+}
+
+.content-item blockquote {
+    width: 100%;
+}
+
+.content-item table {
+    width: 100%;
 }
 
 @media (max-width: 600px) {
