@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;An Overview</title>
 
-  <meta name="template" content= "v2.0">
+
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -14,15 +20,13 @@
   <meta name="description"
       content="Alderholt grew from a small heathland settlement into a thriving village of over 3,000 people shaped by enclosure, new roads, and the shift of its centre from Alderholt Street to the Fordingbridge —&nbsp;Cranborne road. Its history includes several churches and local industries such as pottery and brickmaking with community landmarks like the village hall, railway and public houses." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
+
 </head>
 
 
 <body>
 
-  <a id="top"></a>
+
 
   <header>
     <div class="site-title">Alderholt Archives</div>
@@ -216,24 +220,19 @@
 
       </section>
     </section>
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+</main>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
+
 </body>
 </html>
 

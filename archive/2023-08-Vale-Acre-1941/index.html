@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;Vale Acre Farm 1941</title>
 
-  <meta name="template" content= "v2.0">
+
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -14,15 +20,13 @@
    <meta name="description"
       content="Vale Acre Farm’s name traces back to medieval forms meaning 'fen stream' referring to a tributary of the River Crane. The farm lies just outside Alderholt on the road toward Verwood. In July 1941 a German Junkers Ju 88 shot down by a RAF night fighter crashed near the farm." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
+
 </head>
 
 
 <body>
 
-  <a id="top"></a>
+
 
   <header>
     <div class="site-title">Alderholt Archives</div>
@@ -227,24 +231,19 @@
 
       </section>
     </section>
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+</main>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
+
 </body>
 </html>
 

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;Schools</title>
 
-  <meta name="template" content= "v2.0">
+
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -14,15 +20,13 @@
   <meta name="description"
       content="Alderholt once had several small village schools including those at Cripplestyle, Crendell, Lower Daggons, and the long-standing St. James School founded in 1847. St. James grew with the village where it continues today as part of the Heath Multi Academy Trust." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
+
 </head>
 
 
 <body>
 
-  <a id="top"></a>
+
 
   <header>
     <div class="site-title">Alderholt Archives</div>
@@ -224,24 +228,19 @@
 
       </section>
     </section>
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+</main>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
+
 </body>
 </html>
 

@@ -2,6 +2,7 @@
 *.sh
 *.org
 *.txt
+*.log
 *generate-sitemap.py
 
 # Python cache

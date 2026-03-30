@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--aharc using css v3.0 -->
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
+
     <link rel="stylesheet" href="../css/search-catalogue.css">
     <link rel="stylesheet" href="pagefind/pagefind-ui.css"> <!--load last v1 -->
     <title>Access Alderholt Archives</title>
@@ -14,19 +17,17 @@
 </head>
 <body>
 
-    <header>
-    <div class="site-title">Alderholt Archives</div>
-    </header>
+<header>
+<div class="site-title">Alderholt Archives</div>
+</header>
 
+<nav>
+    <a href="../index.html" aria-current="page">Home</a>
+    <a href="catalogue.html">Catalogue</a>
+    <a href="../aharc-contact.html">Contact</a>
+</nav>
 
-    <nav>
-        <a href="../index.html" aria-current="page">Home</a>
-        <a href="catalogue.html">Catalogue</a>
-        <a href="../aharc-contact.html">Contact</a>
-    </nav>
-
-    <main>
-
+<main>
 
     <section class="myPagefind-container">
         <section class="myPagefind-item">
@@ -36,43 +37,20 @@
 
     <script src="pagefind/pagefind.js"></script>
     <script src="pagefind/pagefind-ui.js"></script>
-    <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        new PagefindUI({
-            element: "#search",
-            showSubResults: false,
-            snippetLength: 0,
-            excerptLength: 0,
-            processResult: (result) => {
-                if (result.meta.publication) {
-                    result.snippet = result.meta.publication;  // replace snippet
-                }
-                return result;
-            }
-        });
-    });
-    </script>
+    <script src="../js/aharc-pagefind.js"></script>
 
-
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-    </main>
+</main>
        
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p> <!-- fallback content -->
-        </div>
-      </div>
-    </footer>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
 
-    <script>
-      fetch('../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
 
 </body>
 </html>

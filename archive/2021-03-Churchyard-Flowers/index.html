@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;Churchyard Flowers</title>
 
-  <meta name="template" content= "v2.0">
+
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -15,43 +21,9 @@
   <meta name="description"
       content="Alderholt St. James churchyard has been carefully managed for wildlife since the church opened in 1849, earning regular awards from the Dorset Wildlife Trust through the Loving Churchyard Project. Its varied mowing regime, seasonal flower displays, and once-maintained grass labyrinth reflect a long-standing commitment to conservation, community involvement, and quiet reflection." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
-
-  <style>
-    .flower-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
-      /*gap: 0.5rem; spacing between items */
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .flower-list li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      .flower-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-      }
-    }
-
-    @media (max-width: 600px) {
-      .flower-list {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-      }
-    }
-  </style>
-
 </head>
 
-
 <body>
-
-  <a id="top"></a>
 
   <header>
     <div class="site-title">Alderholt Archives</div>
@@ -247,24 +219,19 @@
 
       </section>
     </section>
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+</main>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
+
 </body>
 </html>
 

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
+<!--aharc using Oakwood Framework v4.1.0 -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/1-settings.css">
+    <link rel="stylesheet" href="../../css/2-base.css">
+    <link rel="stylesheet" href="../../css/3-components.css">
+    <link rel="stylesheet" href="../../css/4-utilities.css">
+    <link rel="stylesheet" href="../../css/5-custom.css">
   <title>Alderholt Archives —&nbsp;Alderholt Street and the Green</title>
 
-  <meta name="template" content= "v2.0">
 
   <meta name="publication"
         data-pagefind-meta="publication[content]"
@@ -15,23 +20,16 @@
   <meta name="description"
       content="Alderholt Street now Sandleheath Road was the original centre of the village. Developing from the 14th century with farms, a mill, potters, a chapel, and early homesteads clustered. Over time the medieval chapel disappeared and after later enclosures the village centre shifted south." />
 
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/theme.css">
-  <link rel="stylesheet" href="../../css/custom.css">
 </head>
 
 
 <body>
 
-  <a id="top"></a>
-
   <header>
     <div class="site-title">Alderholt Archives</div>
   </header>
 
-
-  <nav>
-      <nav aria-label="Primary">
+  <nav aria-label="Primary">
       <a href="../../index.html">Home</a>
       <a href="../catalogue.html">Catalogue</a>
       <a href="../../aharc-contact.html">Contact</a>
@@ -53,7 +51,7 @@
         <p>It was along this road that the original settlement of Alderholt developed. A small settlement had been established by the turn of the 14th century. The village quickly developed with more dwellings being erected along the road so that by the second decade of the 14th century there seems to have been 14 separate holdings with a total of about 200 acres enclosed as pasture or under cultivation.</p>
 
         <figure>
-          <img src="Image02.webp" alt="xxALTERNATExx">
+          <img src="Image02.webp" alt="The Old Manor Farmhouse">
           <figcaption>The Old Manor Farmhouse
           </figcaption>
         </figure>
@@ -66,8 +64,7 @@
 
        <figure>
           <img src="Image03.webp" alt="The old Village Centre">
-          <figcaption>The old Village Centre showing the Green and the Pond. The 1849 Tithe Fields north of the Green are<br>Pink – Little Chapel Close<br>Red – Great Chapel Close and Chapel Close<br>Green – Chapel Close (William Reed)</p>
-
+          <figcaption>The old Village Centre showing the Green and the Pond. The 1849 Tithe Fields north of the Green are<br>Pink – Little Chapel Close<br>Red – Great Chapel Close and Chapel Close<br>Green – Chapel Close (William Reed)
           </figcaption>
         </figure>
 
@@ -155,24 +152,19 @@
 
       </section>
     </section>
-    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-  </main>
-    <footer>
-      <div id="footer-placeholder">
-        <div class="item-footer">
-          <p>© 2025 Alderholt Archives Ref: ns</p>
-        </div>
-      </div>
-    </footer>
+</main>
 
-    <script>
-      fetch('../../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data; // replaces fallback
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    </script>
+<!-- FAB back to top -->
+<a class="fab fab--bottom-right fab--pill" href="#top" aria-label="Back to top">↑</a>
+
+<!-- Footer (web component) -->
+<div class= "u-mt-lg">
+    <site-footer></site-footer>
+</div>
+
+<!-- Scripts -->
+<script src="../../js/aharc-main.js"></script>
+
 </body>
 </html>
 
