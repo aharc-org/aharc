@@ -69,7 +69,7 @@
     height: auto;
 }
 
-nav {
+.top-nav {
     display: flex;
     flex-wrap: wrap;               /* allow items to wrap to new lines */
     background-color: var(--bg-nav-footer);
@@ -79,7 +79,7 @@ nav {
     margin: 0 auto;
 }
 
-nav a {
+.top-nav a {
     color: var(--text-nav);
     padding: 0 var(--spacing-medium);
     text-decoration: none;
@@ -87,10 +87,10 @@ nav a {
     white-space: nowrap;
 }
 
-nav a:hover {
+.top-nav a:hover,
+.top-nav a[aria-current="page"]  {
     color: var(--text-nav-hover);
 }
-
 
 .hero-container {
     max-width: var(--site-max-width);
@@ -120,7 +120,7 @@ nav a:hover {
 /* Intro */
 
 .intro-container {
-    max-width: var(--site-max-width);
+    max-width: var(--block-max-width);
     margin: 0 auto;
 }
 
@@ -132,7 +132,7 @@ nav a:hover {
 }
 
 .intro-item {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -142,28 +142,20 @@ nav a:hover {
 }
 
 .intro-item p {
-    max-width: 85%;
+    max-width: 90%;
     margin-bottom: var(--spacing-small);
     text-align: justify;
     text-justify: inter-word;
     font-size: var(--font-fluid-body);
 }
 
-.intro-item > p:first-child {
-    margin-top: var(--spacing-block);
-}
 
 .intro-item img {
     display: block;
     margin: 0 auto;
-    max-width: 95%;
+    max-width: 90%;
     padding-top: var(--spacing-small);
     height: auto;
-}
-
-.intro-item blockquote {
-    background: var(--bg-blockquote-table);
-    padding-top: var(--spacing-small);
 }
 
 /* End intro */
@@ -252,6 +244,7 @@ nav a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-inner);
     box-shadow: var(--shadow-light);
     padding-inline: var(--spacing-inline);
     padding-block: var(--spacing-block);
@@ -260,13 +253,16 @@ nav a:hover {
 
 .content-item {
     width: 100%;
-    padding: var(--spacing-content);
+    max-width: var(--block-max-width);
     background-color: var(--bg-inner);
+    padding: var(--spacing-content);
     margin: 0 auto;
+    margin: var(--spacing-small) auto;
+    font-size: var(--font-fluid-body);
 }
 
 .content-item p {
-    max-width: 65ch;
+    max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
 }
@@ -293,7 +289,7 @@ nav a:hover {
 }
 
 .content-item figcaption {
-    max-width: 700px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     font-size: var(--font-fluid-body);
     font-style: italic;
@@ -336,53 +332,15 @@ nav a:hover {
     align-self: end;
 }
 
-.content-item ul {
-    max-width: 65ch;
-    margin: var(--spacing-small) auto;
-    font-size: var(--font-fluid-body);
-    line-height: 1.6;
-}
-
-.content-item li {
-    margin-left: var(--spacing-medium);
-    margin-bottom: var(--spacing-xsmall);
-}
-
-.content-item blockquote {
-    width: 95%;
-    max-width: 600px;
-    background: var(--bg-blockquote-table);
-    border-left: 4px solid var(--border-color);
-    padding: var(--spacing-xsmall) var(--spacing-medium);
-    margin: var(--spacing-small) auto;
-    font-size: var(--font-fluid-body);
-    font-style: italic;
-}
 
 .content-item .table-wrapper {
     overflow-x: auto;
 }
 
 .content-item table {
-    width: 95%;
-    max-width: 600px;
-    margin: var(--spacing-small) auto;
+    max-width: var(--content-max-width);
     border-left: 4px solid var(--border-color);
     background-color: var(--bg-blockquote-table);
-    border-collapse: collapse;
-    font-size: var(--font-fluid-body);
-}
-
-.content-item table th,
-.content-item table td {
-    border: 1px solid var(--text-dark);
-    padding: var(--spacing-xs) var(--spacing-medium);
-    text-align: var(--th-td-text-align);
-}
-
-.content-item table th.small-head {
-    font-size: 0.85rem;
-    font-weight: bold;
 }
 
 /* End content */
@@ -390,7 +348,7 @@ nav a:hover {
 /* Call to action */
 
 .cta-container {
-    max-width: var(--site-max-width);
+    max-width: var(--block-max-width);
     margin: 0 auto;
 }
 
@@ -408,14 +366,14 @@ nav a:hover {
 /* Single contact column */
 
 .container-contact {
-    max-width: var(--site-max-width);
+    max-width: var(--block-max-width);
     margin: 0 auto;
     background-color: var(--bg-inner);
     box-shadow: var(--shadow-light);
 }
 
 .item-contact {
-    max-width: 75%;
+    max-width: 100%;
     margin: var(--spacing-content) auto;
     padding-block: var(--spacing-content);
     background-color: var(--bg-inner);
@@ -649,7 +607,7 @@ site-footer .item-footer {
     padding: var(--spacing-content) 0;
 }
 
-/* End footer */
+/* End site-footer */
 
 
 /* Media queries */

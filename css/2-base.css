@@ -71,30 +71,75 @@ a:focus-visible {
     outline-offset: 2px;
 }
 
-/* Spaced list */
-/* Vertical list — extra space between items, no underlines on links */
-ul.spaced-list {
-     /* list-style: none;    remove bullets if you want */
-     padding: var(--spacing-large);
-     margin: var(--spacing-large);
-}
-ul.spaced-list li {
-    font-size: var(--font-fluid-medium);
-    margin: 0 0 var(--spacing-large) 0;     /* bottom spacing between items */
-}
-ul.spaced-list a {
-    text-decoration: none;  /* remove underline */
-    font-size: var(--font-fluid-medium);
-    /*color: inherit;         /* keep link colour same as surrounding text */
+blockquote {
+    width: 100%;
+    max-width: var(--content-max-width);
+    background: var(--bg-blockquote-table);
+    padding: var(--spacing-xsmall) var(--spacing-medium);
+    margin: var(--spacing-small) auto;
+    font-size: var(--font-fluid-body);
+    font-style: italic;
 }
 
-ul.spaced-list a:hover {
+table {
+    width: 100%;
+    max-width: var(--block-max-width);
+    margin: var(--spacing-small) auto;  /* Centers like your ul */
+    border-collapse: collapse;   /* Merges borders for clean lines */
+    font-size: var(--font-fluid-body); /* Matches ul text scale */
+}
+
+table th,
+table td {
+    border: 1px solid var(--text-dark);
+    padding: var(--spacing-small) 0 var(--spacing-small) var(--spacing-xsmall); /*trbl*/
+}
+
+table th.small-head {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+ul {
+    max-width: var(--content-max-width);
+    margin: var(--spacing-small) auto;
+    font-size: var(--font-fluid-body);
+    line-height: 1.6;
+}
+
+li {
+    margin-left: var(--spacing-medium);
+    margin-bottom: var(--spacing-xsmall);
+}
+
+/* Spaced lists — vertical rhythm, no link underlines */
+ul.spaced-list,
+ul.no-bullet-spaced-list {
+    padding: 0 var(--spacing-large);
+    margin: var(--spacing-large) 0;
+}
+
+ul.spaced-list li,
+ul.no-bullet-spaced-list li {
+    font-size: var(--font-fluid-medium);
+    margin-bottom: var(--spacing-large);
+}
+
+ul.spaced-list a,
+ul.no-bullet-spaced-list a {
+    text-decoration: none;
+    font-size: var(--font-fluid-medium);
+}
+
+ul.spaced-list a:hover,
+ul.no-bullet-spaced-list a:hover {
     color: var(--link-hover-color);
-    font-weight:700;
-
+    font-weight: 700;
 }
 
-/* End Spaced list */
+ul.no-bullet-spaced-list {
+    list-style: none;
+}
 
 
 button {

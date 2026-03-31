@@ -1,15 +1,22 @@
-//bbees using Oakwood Framework v4.1.0
+//aharc using Oakwood Framework v4.1.0
 class SiteFooter extends HTMLElement {
     connectedCallback() {
+        this.render();
+    }
+
+    render() {
         this.innerHTML = `
-            <div class="item-footer">
-                <p>© 2025 Alderholt Archives</p>
-            </div>
+            <footer class="site-footer">
+                <div class="item-footer">
+                    <p>© 2025 Alderholt Archives</p>
+                </div>
+            </footer>
         `;
     }
 }
 
 customElements.define('site-footer', SiteFooter);
+
 
 const fabs = document.querySelectorAll('.fab');
 

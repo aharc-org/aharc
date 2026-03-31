@@ -13,37 +13,14 @@
 /* Overides */
 
 :root {
-    --title-align: center;
     --heading-align: center;
-    --font-fluid-xlarge: clamp(2.4rem, 3.6vw + 1.2rem, 4rem);
-}
-
-.content-container {
-    background-color: var(--bg-inner);
-
 }
 
 .content-item blockquote {
-    width: 100%;
-}
-
-
-.content-item table th,
-.content-item table td {
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
-  padding-left: var(--spacing-xsmall);
-}
-
-.content-item td.center,
-.content-item th.center {
-  text-align: center;
-  vertical-align: middle;
+    border-left: 4px solid var(--border-color);
 }
 
 .intro-item blockquote {
-    width: 100%;
-    border-left: none;
     padding: 0;
 }
 
@@ -54,10 +31,6 @@
 
 .intro-heading {
     font-size: var(--font-fluid-medium);
-}
-
-.content-item {
-    padding: clamp(16px, 2vw, 24px);
 }
 
 /* Pagefind Search Override*/
@@ -107,7 +80,7 @@
 
     .catalogue-item{
         flex: 1 1 calc(33.33% - 20px);
-        max-width: 600px;
+        max-width: var(--content-max-width);
         background-color: white;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -143,10 +116,6 @@
 }
 
 .content-item blockquote {
-    width: 100%;
-}
-
-.content-item table {
     width: 100%;
 }
 
