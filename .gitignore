@@ -5,6 +5,9 @@
 *.log
 *generate-sitemap.py
 
+# Local sitemap
+sitemap.xml
+
 # Pagefind outputs
 /archive/pagefind/
 /_pagefind/
