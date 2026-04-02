@@ -52,6 +52,12 @@ p.larger-text {
     font-size: var(--font-fluid-large);
 }
 
+p.centered {
+    max-width: var(--content-max-width);
+    width: 50%;            /* or 80%, etc. */
+    margin: 0 auto;         /* centers the block */
+}
+
 a {
     color: var(--link-color);
     background-color: transparent;
@@ -75,7 +81,7 @@ blockquote {
     width: 100%;
     max-width: var(--content-max-width);
     background: var(--bg-blockquote-table);
-    padding: var(--spacing-xsmall) var(--spacing-medium);
+    padding: var(--spacing-medium);
     margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
     font-style: italic;
@@ -104,6 +110,7 @@ ul {
     max-width: var(--content-max-width);
     margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
+    padding-left: 5%;
     line-height: 1.6;
 }
 

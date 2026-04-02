@@ -42,15 +42,6 @@
     --fab-radius: 50%;              /* circular — default */
     --fab-size-wide: calc(var(--fab-size) * 2.5);
 
-    --fab-bg: var(--bg-button);
-    --fab-color: var(--text-button);
-    --fab-bg-hover: var(--bg-button-hover);
-    --fab-color-hover: var(--text-button-hover);
-
-    --fab-shadow: var(--shadow-medium);
-    --fab-offset: var(--spacing-block);
-
-
 
     --font-base: Montserrat, sans-serif;
     --font-brand: ManufacturingConsent, serif;
@@ -81,15 +72,25 @@
     --bg-blockquote-table: honeydew;
 
     --bg-nav-footer: seagreen;
-    --text-nav: lawngreen;
-    --text-nav-hover: white;
+    --text-nav: white;
+    --text-nav-hover: lawngreen;
     --text-footer: lawngreen;
 
     --bg-button: seagreen;
+    --text-button: white ;
     --bg-button-hover: seagreen;
-    --text-button: lawngreen;
-    --text-button-hover: white;
+    --text-button-hover: lawngreen;
     --button-radius: 25px;
+
+
+    --fab-bg: seagreen;
+    --fab-text: white;
+    --fab-bg-hover: seagreen;
+    --fab-text-hover: lawngreen;
+
+    --fab-shadow: var(--shadow-medium);
+    --fab-offset: var(--spacing-block);
+
 
     --link-color: blue;
     --link-hover-color: navy;

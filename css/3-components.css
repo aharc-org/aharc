@@ -47,6 +47,10 @@
     text-align: center; /* For use outside header */
 }
 
+.site-title--large {
+    font-size: var(--font-fluid-xlarge);
+}
+
 .header-left {
     grid-column: 1;
 }
@@ -256,7 +260,6 @@
     max-width: var(--block-max-width);
     background-color: var(--bg-inner);
     padding: var(--spacing-content);
-    margin: 0 auto;
     margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
 }
@@ -265,10 +268,6 @@
     max-width: 75ch;
     margin-left: auto;
     margin-right: auto;
-}
-
-.content-item > p:first-child {
-    margin-top: var(--spacing-block);
 }
 
 .content-item figure {
@@ -297,7 +296,7 @@
 }
 
 .content-item.narrow figure {
-    max-width: 50%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -363,20 +362,22 @@
 
 /* End call to action */
 
-/* Single contact column */
+/* Single form contact column */
 
-.container-contact {
+.contact-container {
     max-width: var(--block-max-width);
+    width: 100%;
     margin: 0 auto;
     background-color: var(--bg-inner);
     box-shadow: var(--shadow-light);
 }
 
-.item-contact {
-    max-width: 100%;
-    margin: var(--spacing-content) auto;
-    padding-block: var(--spacing-content);
+.contact-item {
+    max-width: var(--content-max-width);
+    margin: var(--spacing-block) auto;
+    padding: var(--spacing-content);
     background-color: var(--bg-inner);
+    box-sizing: border-box;
 }
 
 /* ==========================
@@ -448,19 +449,24 @@ textarea.form-control {
     text-decoration: none;
     cursor: pointer;
 
-    transition:
-        background-color 0.15s ease,
-        color 0.15s ease,
-        transform 0.15s ease,
-        opacity 0.15s ease;
 }
 
 /* Hover / focus */
-.button:hover,
-.button:focus-visible {
+
+
+.button:hover { /* First to avoid conflict */
     background-color: var(--bg-button-hover);
     color: var(--text-button-hover);
 }
+.button:active {
+    transform: translateY(2px);
+}
+.button:focus-visible {
+    outline: 2px solid  var(--brand-accent);
+    transform: translateY(-2px);
+}
+
+
 /* Variants */
 .button--small {
     font-size: var(--font-fluid-small);
@@ -486,8 +492,6 @@ textarea.form-control {
     display: inline-flex;
     opacity: 1;
     cursor: pointer;
-    transform: translateY(-2px);
-    transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
 .button--submit:disabled {
@@ -512,7 +516,7 @@ textarea.form-control {
     padding-bottom: 0.15em;  /* optical correction for ↑ character */
     line-height: 1;
     font-weight: 700;
-    color: var(--fab-color);
+    color: var(--fab-text);
     background-color: var(--fab-bg);
     border-radius: var(--fab-radius);
     text-decoration: none;
@@ -541,7 +545,7 @@ textarea.form-control {
     opacity: 1;
     transform: translateY(-4px);
     background-color: var(--fab-bg-hover);
-    color: var(--fab-color-hover);
+    color: var(--fab-text-hover);
 }
 
 /* Focus accessibility */
@@ -589,8 +593,8 @@ textarea.form-control {
 
 /* Footer custom element fort script */
 
-site-footer {
-    display: flex; /* was flex */
+footer-site {
+    display: flex;
     flex-direction: column;
     background-color: var(--bg-nav-footer);
     align-items: center;
@@ -600,7 +604,7 @@ site-footer {
     margin: 0 auto;
 }
 
-site-footer .item-footer {
+footer-site .footer-item {
     width: 100%;
     color: var(--text-footer);
     text-align: center;

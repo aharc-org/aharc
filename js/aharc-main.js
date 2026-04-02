@@ -6,16 +6,16 @@ class SiteFooter extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <footer class="site-footer">
-                <div class="item-footer">
-                    <p>© 2025 Alderholt Archives</p>
+            <footer class="footer-site">
+                <div class="footer-item">
+                    <p>© 2025 Alderholt Archives.</p>
                 </div>
             </footer>
         `;
     }
 }
 
-customElements.define('site-footer', SiteFooter);
+customElements.define('footer-site', SiteFooter);
 
 
 const fabs = document.querySelectorAll('.fab');
