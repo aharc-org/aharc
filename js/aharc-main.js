@@ -8,7 +8,7 @@ class SiteFooter extends HTMLElement {
         this.innerHTML = `
             <footer class="footer-site">
                 <div class="footer-item">
-                    <p>© 2025 Alderholt Archives.</p>
+                    <p>Alderholt Archives</p>
                 </div>
             </footer>
         `;
