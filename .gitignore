@@ -5,6 +5,10 @@
 *.log
 *generate-sitemap.py
 
+#pagefind
+/pagefind/
+/_pagefind/
+
 # Python cache
 __pycache__/
 *.pyc
