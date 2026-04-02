@@ -30,6 +30,13 @@
 
 /* Pagefind Search Override*/
 
+.pagefind-thumb {
+  display: none !important;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .myPagefind-container {
     display: flex;
     flex-direction: column;
