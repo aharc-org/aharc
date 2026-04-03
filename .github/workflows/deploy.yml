@@ -1,10 +1,10 @@
-name: Build and Deploy with Pagefind
+name: Build and Deploy with Pagefind and generate-sitemap
 
 on:
   push:
     branches:
       - main
-    workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,12 +19,12 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # For accurate lastmod dates in sitemap
+          fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -51,7 +51,7 @@ jobs:
           fi
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
