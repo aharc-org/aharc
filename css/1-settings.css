@@ -107,7 +107,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+    src: url('/assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2');
 }
 /* montserrat-italic - latin */
 @font-face {
@@ -115,7 +115,7 @@
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: 400;
-    src: url('../assets/fonts/montserrat-v29-latin-italic.woff2') format('woff2');
+    src: url('/assets/fonts/montserrat-v29-latin-italic.woff2') format('woff2');
 }
 /* montserrat-700 - latin */
 @font-face {
@@ -123,7 +123,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('../assets/fonts/montserrat-v29-latin-700.woff2') format('woff2');
+    src: url('/assets/fonts/montserrat-v29-latin-700.woff2') format('woff2');
 }
 
 @font-face {
@@ -131,5 +131,5 @@
     font-family: 'ManufacturingConsent';
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype');
 }
