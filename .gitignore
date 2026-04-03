@@ -5,6 +5,9 @@
 *.log
 *generate-sitemap.py
 
+# Ignore temporary dev server folder
+.devserver/
+
 # Local sitemap
 sitemap.xml
 
