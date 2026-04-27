@@ -1,5 +1,5 @@
 /*  2-base.css
-    Oakwood Framework v4.1.0
+    Oakwood Framework v4.1.02 table captiom added
     CSS reset + bare element defaults. No classes. Copy-paste once, never touch.
 */
 
@@ -95,6 +95,12 @@ table {
     font-size: var(--font-fluid-body); /* Matches ul text scale */
 }
 
+table caption {
+    font-size: var(--font-fluid-body);
+    font-weight: 700;
+    padding-bottom: 0.85rem;
+}
+
 table th,
 table td {
     border: 1px solid var(--text-dark);
@@ -106,7 +112,7 @@ table th.small-head {
     font-weight: 600;
 }
 
-ul {
+ul, ol {
     max-width: var(--content-max-width);
     margin: var(--spacing-small) auto;
     font-size: var(--font-fluid-body);
@@ -114,7 +120,7 @@ ul {
     line-height: 1.6;
 }
 
-li {
+ul li, ol li  {
     margin-left: var(--spacing-medium);
     margin-bottom: var(--spacing-xsmall);
 }

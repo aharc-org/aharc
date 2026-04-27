@@ -1,5 +1,5 @@
 /*  3-components.css
-    Oakwood Framework v4.1.0
+    Oakwood Framework v4.1.1 visibility utils
     Reusable UI blocks. Uses tokens from Layer 1, never raw values.
 */
 
@@ -661,3 +661,35 @@ footer-site .footer-item {
 }
 
 /* End media queries */
+
+/* ============================================
+   VISIBILITY UTILITIES
+   ============================================ */
+
+/* Hidden/Visible base */
+.hidden  { display: none !important; }
+.visible { display: revert !important; }
+
+/* Mobile only (up to 767px) */
+@media (max-width: 767px) {
+  .hidden-mobile  { display: none !important; }
+  .visible-mobile { display: revert !important; }
+}
+
+/* Tablet only (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-tablet  { display: none !important; }
+  .visible-tablet { display: revert !important; }
+}
+
+/* Desktop (1024px–1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hidden-desktop  { display: none !important; }
+  .visible-desktop { display: revert !important; }
+}
+
+/* Large (1440px+) */
+@media (min-width: 1440px) {
+  .hidden-large  { display: none !important; }
+  .visible-large { display: revert !important; }
+}
