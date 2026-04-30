@@ -1,5 +1,5 @@
 /*  2-base.css
-    Oakwood Framework v4.1.02 table captiom added
+    Oakwood Framework v4.1.03 table captiom added and col alignment
     CSS reset + bare element defaults. No classes. Copy-paste once, never touch.
 */
 
@@ -111,6 +111,9 @@ table th.small-head {
     font-size: 0.85rem;
     font-weight: 600;
 }
+
+table .col-center { text-align: center; }
+table .col-right  { text-align: right; }
 
 ul, ol {
     max-width: var(--content-max-width);
