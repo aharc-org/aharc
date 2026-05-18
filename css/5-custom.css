@@ -27,8 +27,7 @@
 .intro-heading {
     font-size: var(--font-fluid-medium);
 }
-
-/* Pagefind Search Override*/
+/* Pagefind Thumb.webp in article to be hidden */
 
 .pagefind-thumb {
   display: none !important;
@@ -36,6 +35,8 @@
   height: 0;
   overflow: hidden;
 }
+
+/* Pagefind Search Override */
 
 .myPagefind-container {
     display: flex;
@@ -45,7 +46,7 @@
 
 .myPagefind-item {
     width: 100%;
-    max-width: 768px;
+    max-width: 860px;
     background-color: var(--bg-blockquote-table);
     margin: var(--spacing-block) auto;
     padding: var(--spacing-content);
@@ -53,21 +54,119 @@
     box-sizing: border-box;
 }
 
+/* ── Search input ── */
+#search .pagefind-ui__search-input {
+    width: 100%;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+    padding: 0.6em 1em 0.6em 2.6em;
+    border: 2px solid var(--color-border, #ccc);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#search .pagefind-ui__search-input:focus {
+    outline: none;
+    border-color: #1a6bbf;
+    box-shadow: 0 0 0 3px rgba(26, 107, 191, 0.15);
+}
+
+/* ── Result count ── */
+#search .pagefind-ui__message {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary, #555);
+    margin: 0.75em 0 1em;
+}
+
+/* ── Individual result ── */
+#search .pagefind-ui__result {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border, #ddd);
+    list-style: none;
+}
+
+/* ── Thumbnail ── */
+#search .pagefind-ui__result-thumb {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* ── Text content beside thumbnail ── */
+#search .pagefind-ui__result-inner {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Series members get a left border instead of the text badge */
+#search .pagefind-ui__result.pf-series {
+    border-left: 3px solid var(--color-accent, #2a7a2a);
+    padding-left: 1rem;
+}
+
+/* ── Title ── */
 #search .pagefind-ui__result-title {
-    background-color: var(--bg-blockquote-table);
+    font-size: clamp(1rem, 2vw + 0.4rem, 1.15rem);
+    font-weight: 600;
+    margin: 0 0 0.4em;
+    background-color: transparent;
+    text-align: left;
 }
 
+#search .pagefind-ui__result-link {
+    color: var(--color-link, #1a6bbf);
+    text-decoration: none;
+}
+
+#search .pagefind-ui__result-link:hover {
+    text-decoration: underline;
+}
+
+/* ── Excerpt — show it ── */
+#search .pagefind-ui__result-excerpt {
+    display: block !important;
+    font-size: clamp(0.875rem, 1.5vw + 0.3rem, 1rem);
+    color: var(--color-text-secondary, #444);
+    line-height: 1.6;
+    margin: 0;
+}
+
+#search .pagefind-ui__result-excerpt mark {
+    background: none;
+    font-weight: 600;
+    color: inherit;
+}
+
+/* ── Series badge ── */
+#search .pagefind-ui__result-nested-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent, #2a7a2a);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4em;
+}
+
+/* ── No results / tag ── */
 #search .pagefind-ui__result-tag {
-    font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.25rem);
-    background-color: var(--bg-inner); /* off white background */
-    padding: var(--spacing-small);           /* optional padding */
+    font-size: clamp(1rem, 2vw + 0.3rem, 1.1rem);
+    background-color: var(--bg-inner);
+    padding: var(--spacing-small);
 }
 
-#search .pagefind-ui__result-excerpt { /*hide standard snippet */
-    display: none !important;
+/* ── Hide image if none provided ── */
+#search .pagefind-ui__result-thumb:not([src]),
+#search .pagefind-ui__result-thumb[src=""] {
+    display: none;
 }
 
-    /* End Pagefind */
+/* End Pagefind */
 
 /* Catalogue */
 .catalogue-container {
