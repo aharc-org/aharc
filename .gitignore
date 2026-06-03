@@ -27,3 +27,7 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Overrides
+!.well-known/security.txt
+
