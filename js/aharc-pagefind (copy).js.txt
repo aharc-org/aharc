@@ -29,17 +29,17 @@ function groupAndSort(rawResults) {
   });
 
   // Debug logging — remove when satisfied
-  // console.group('aharc-pagefind: grouped results');
-  // output.forEach((g, i) => {
-  //   if (g.type === 'single') {
-  //     console.log(`[${i}] single —`, g.result.meta.title);
-  //   } else {
-  //     console.group(`[${i}] series (${g.items.length} parts)`);
-  //     g.items.forEach(item => console.log(`  Part ${item._part} —`, item.meta.title, item.url));
-  //     console.groupEnd();
-  //   }
-  // });
-  // console.groupEnd();
+  console.group('aharc-pagefind: grouped results');
+  output.forEach((g, i) => {
+    if (g.type === 'single') {
+      console.log(`[${i}] single —`, g.result.meta.title);
+    } else {
+      console.group(`[${i}] series (${g.items.length} parts)`);
+      g.items.forEach(item => console.log(`  Part ${item._part} —`, item.meta.title, item.url));
+      console.groupEnd();
+    }
+  });
+  console.groupEnd();
 
   return output;
 }

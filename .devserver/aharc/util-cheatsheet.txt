@@ -1,0 +1,105 @@
+# Spacing Utilities Cheat Sheet (Oakwood v4)
+
+## Semantic Spacing Tokens
+--spacing-xs       → tiny
+--spacing-sm       → small
+--spacing-md       → paragraph rhythm
+--spacing-lg       → content padding
+--spacing-block    → block spacing
+--spacing-section  → section spacing
+--spacing-inline   → inline gap
+--spacing-content  → content gap
+
+------------------------------------------------------------
+MARGIN UTILITIES
+------------------------------------------------------------
+
+Margin Bottom:
+.u-mb-xs
+.u-mb-sm
+.u-mb-md
+.u-mb-lg
+.u-mb-block
+.u-mb-section
+
+Margin Top:
+.u-mt-xs
+.u-mt-sm
+.u-mt-md
+.u-mt-lg
+.u-mt-block
+.u-mt-section
+
+Margin Left / Right:
+.u-ml-xs   .u-mr-xs
+.u-ml-sm   .u-mr-sm
+.u-ml-md   .u-mr-md
+.u-ml-lg   .u-mr-lg
+
+------------------------------------------------------------
+PADDING UTILITIES
+------------------------------------------------------------
+
+Padding Bottom:
+.u-pb-xs
+.u-pb-sm
+.u-pb-md
+.u-pb-lg
+.u-pb-block
+.u-pb-section
+
+Padding Top:
+.u-pt-xs
+.u-pt-sm
+.u-pt-md
+.u-pt-lg
+.u-pt-block
+.u-pt-section
+
+Padding Left / Right:
+.u-pl-xs   .u-pr-xs
+.u-pl-sm   .u-pr-sm
+.u-pl-md   .u-pr-md
+.u-pl-lg   .u-pr-lg
+
+------------------------------------------------------------
+LAYOUT UTILITIES
+------------------------------------------------------------
+
+Vertical Stack (auto spacing between children):
+.u-stack-xs
+.u-stack-sm
+.u-stack-md
+.u-stack-lg
+.u-stack-block
+.u-stack-section
+
+Content Flow (default vertical rhythm):
+.u-flow
+
+Inline Gap (flex gap for inline items):
+.u-inline-gap
+
+Content Gap (spacing between text blocks, card bodies):
+.u-content-gap
+
+------------------------------------------------------------
+RESPONSIVE VARIANTS
+------------------------------------------------------------
+
+Breakpoints:
+.sm → ≥480px
+.md → ≥768px
+.lg → ≥1024px
+
+Pattern:
+.u-mb-md.sm
+.u-pt-lg.md
+.u-ml-sm.lg
+.u-stack-block.md
+
+Examples:
+.u-mb-md.sm     → margin-bottom: var(--spacing-md) at ≥480px
+.u-pt-lg.md     → padding-top: var(--spacing-lg) at ≥768px
+.u-stack-sm.lg  → stack spacing at ≥1024px
+

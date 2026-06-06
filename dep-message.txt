@@ -1,0 +1,1 @@
+Added commented out pagefind console debug
