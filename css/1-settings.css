@@ -1,0 +1,135 @@
+/*  1-settings.css
+    aharc Oakwood Framework v4.1.0
+    Design tokens — colours, fonts, spacing scale.
+    Differs per client.
+*/
+:root {
+
+    --site-max-width: 900px;
+    --block-max-width: 800px;
+    --content-max-width: 600px;
+
+    /* Responsive spacing */
+    --space-1: clamp(4px, 0.4vw, 6px); /* tiny */
+    --space-2: clamp(8px, 0.6vw, 12px); /* icon */
+    --space-3: clamp(12px, 1vw, 16px); /* paragraph */
+    --space-4: clamp(16px, 1.6vw, 24px); /* card content item padding */
+    --space-5: clamp(24px, 2.5vw, 40px);  /* block */
+    --space-6: clamp(40px, 4vw, 64px); /* section */
+
+    /* Semanmtic spacing */
+    --spacing-xsmall:var(--space-1);
+    --spacing-small: var(--space-2);
+    --spacing-medium: var(--space-3);
+    --spacing-large: var(--space-4);
+    --spacing-inline: var(--space-3);
+    --spacing-content: var(--space-4);
+    --spacing-block: var(--space-5);
+    --spacing-section: var(--space-6);
+
+
+    --border-radius: 6px;           /* Border radius */
+    --border-color: #ccc;           /* Border colour for cards, blockquotes, tables */
+
+    /* Form field sizes */
+    --form-width-small: 200px;
+    --form-width-medium: 300px;
+    --form-width-large: 600px;
+
+    --fab-size: 64px;
+    --fab-size-small: 52px;
+    --fab-size-large: 72px;
+    --fab-radius: 50%;              /* circular — default */
+    --fab-size-wide: calc(var(--fab-size) * 2.5);
+
+
+    --font-base: Montserrat, sans-serif;
+    --font-brand: ManufacturingConsent, serif;
+
+    --font-fluid-small:  clamp(0.875rem, 0.8vw + 0.75rem, 1rem);     /* captions, labels */
+    --font-fluid-body:   clamp(1rem, 1vw + 0.75rem, 1.125rem);        /* paragraphs */
+    --font-fluid-medium: clamp(1.125rem, 1.5vw + 0.9rem, 1.4rem);     /* intro, subheadings */
+    --font-fluid-large:  clamp(1.6rem, 2vw + 1.2rem, 2.2rem);         /* CTA, page titles */
+    --font-fluid-xlarge: clamp(2.4rem, 3.6vw + 1.2rem, 4rem);
+
+    --shadow-light: 0 0 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
+
+    --title-align: center;
+    --heading-align: left;
+    --th-td-text-align: left;
+
+    --brand-primary: seagreen;   /* Design tokens */
+    --brand-accent: lightseagreen;
+
+    --text-dark: black;
+    --text-medium: lightslategrey;
+    --text-light: white;
+
+
+    --bg-outer: ivory;
+    --bg-inner: white;
+    --bg-blockquote-table: honeydew;
+
+    --bg-nav-footer: seagreen;
+    --text-nav: white;
+    --text-nav-hover: lawngreen;
+    --text-footer: lawngreen;
+
+    --bg-button: seagreen;
+    --text-button: white ;
+    --bg-button-hover: seagreen;
+    --text-button-hover: lawngreen;
+    --button-radius: 25px;
+
+
+    --fab-bg: seagreen;
+    --fab-text: white;
+    --fab-bg-hover: seagreen;
+    --fab-text-hover: lawngreen;
+
+    --fab-shadow: var(--shadow-medium);
+    --fab-offset: var(--spacing-block);
+
+
+    --link-color: blue;
+    --link-hover-color: navy;
+
+    --bg-card-normal: #d8f2ee;
+    --bg-card-highlight: #cde8e4;
+
+}
+
+/* Fonts Remove any not required by site */
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+}
+/* montserrat-italic - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/assets/fonts/montserrat-v29-latin-italic.woff2') format('woff2');
+}
+/* montserrat-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/montserrat-v29-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ManufacturingConsent';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/ManufacturingConsent-Regular.ttf') format('truetype');
+}

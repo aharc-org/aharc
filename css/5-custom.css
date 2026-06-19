@@ -1,0 +1,263 @@
+/*  5-custom.css
+    aharc
+    Oakwood Framework v4.1.0
+    Single-purpose helpers. Always win the cascade — important is fine here.
+    Differs per client.
+*/
+
+
+/*Oakwood ltd Framework v3.0 custom.css */
+
+/* site specific */
+
+/* Overides */
+
+:root {
+    --heading-align: center;
+}
+
+.content-item blockquote {
+        border-left: 4px solid var(--border-color);
+}
+
+.intro-item blockquote {
+    padding: 0;
+}
+
+.intro-heading {
+    font-size: var(--font-fluid-medium);
+}
+/* Pagefind Thumb.webp in article to be hidden */
+
+.pagefind-thumb {
+  display: none !important;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Pagefind Search Override */
+
+.myPagefind-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myPagefind-item {
+    width: 100%;
+    max-width: 860px;
+    background-color: var(--bg-blockquote-table);
+    margin: var(--spacing-block) auto;
+    padding: var(--spacing-content);
+    box-shadow: var(--shadow-light);
+    box-sizing: border-box;
+}
+
+/* ── Search input ── */
+#search .pagefind-ui__search-input {
+    width: 100%;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+    padding: 0.6em 1em 0.6em 2.6em;
+    border: 2px solid var(--color-border, #ccc);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#search .pagefind-ui__search-input:focus {
+    outline: none;
+    border-color: #1a6bbf;
+    box-shadow: 0 0 0 3px rgba(26, 107, 191, 0.15);
+}
+
+/* ── Result count ── */
+#search .pagefind-ui__message {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary, #555);
+    margin: 0.75em 0 1em;
+}
+
+/* ── Individual result ── */
+#search .pagefind-ui__result {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border, #ddd);
+    list-style: none;
+}
+
+/* ── Thumbnail ── */
+#search .pagefind-ui__result-thumb {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* ── Text content beside thumbnail ── */
+#search .pagefind-ui__result-inner {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Series members get a left border instead of the text badge */
+
+#search .pagefind-ui__result.pf-series,
+#search .pagefind-ui__result.pf-vicar {
+    border-left: 5px solid var(--color-accent, #2a7a2a);
+    padding-left: 1rem;
+}
+/* the second and subsequent grouped cards different removed top border to pull them together*/
+#search .pagefind-ui__result.pf-series + .pf-series,
+#search .pagefind-ui__result.pf-vicar + .pf-vicar {
+    border-top: none;
+}
+
+/* ── Title ── */
+#search .pagefind-ui__result-title {
+    font-size: clamp(1rem, 2vw + 0.4rem, 1.15rem);
+    font-weight: 600;
+    margin: 0 0 0.4em;
+    background-color: transparent;
+    text-align: left;
+}
+
+#search .pagefind-ui__result-link {
+    color: var(--color-link, #1a6bbf);
+    text-decoration: none;
+}
+
+#search .pagefind-ui__result-link:hover {
+    text-decoration: underline;
+}
+
+/* ── Excerpt — show it ── */
+#search .pagefind-ui__result-excerpt {
+    display: block !important;
+    font-size: clamp(0.875rem, 1.5vw + 0.3rem, 1rem);
+    color: var(--color-text-secondary, #444);
+    line-height: 1.6;
+    margin: 0;
+}
+
+#search .pagefind-ui__result-excerpt mark {
+    background: none;
+    font-weight: 600;
+    color: inherit;
+}
+
+/* ── Series badge ── */
+#search .pagefind-ui__result-nested-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent, #2a7a2a);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4em;
+}
+
+/* ── No results / tag ── */
+#search .pagefind-ui__result-tag {
+    font-size: clamp(1rem, 2vw + 0.3rem, 1.1rem);
+    background-color: var(--bg-inner);
+    padding: var(--spacing-small);
+}
+
+/* ── Hide image if none provided ── */
+#search .pagefind-ui__result-thumb:not([src]),
+#search .pagefind-ui__result-thumb[src=""] {
+    display: none;
+}
+
+/* End Pagefind */
+
+/* Catalogue */
+.catalogue-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: var(--spacing-block);
+    padding: var(--spacing-block);
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+}
+
+.catalogue-item {
+    flex: 1 1 calc(33.33% - var(--spacing-block) * 2);
+    min-width: 220px;
+    max-width: var(--content-max-width);
+    background-color: var(--bg-inner);
+    padding: var(--spacing-content);
+    box-shadow: var(--shadow-light);
+    box-sizing: border-box;
+}
+
+
+
+/* End Catalogue */
+
+/* Additions */
+
+.su-codes {
+    font-size: 80%;
+    font-weight: 500;
+}
+
+.flower-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  /*gap: 0.5rem; spacing between items */
+  list-style-type: disc;
+  padding-left: var(--spacing-content);
+}
+
+.flower-list li {
+  margin-bottom: var(--spacing-xsmall);
+}
+
+/* Responsive adjustments Desktop first*/
+@media (max-width: 1024px) {
+  .flower-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .flower-list {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .content-item blockquote {
+    width: 100%;
+}
+}
+
+
+
+
+
+/* Media queries mobil;e first */
+/* Tablet — 2 columns */
+@media (max-width: 1024px) {
+    .catalogue-item {
+        flex: 1 1 calc(50% - var(--spacing-block) * 2);
+    }
+}
+
+/* Mobile — 1 column */
+@media (max-width: 600px) {
+    .catalogue-container {
+        padding: var(--spacing-content);
+        gap: var(--spacing-content);
+    }
+    .catalogue-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,5 @@
+Contact: mailto:security17@solentsoftware.co.uk
+Expires: 2027-01-01T00:00:00Z
+Preferred-Languages: en
+Canonical: https://aldeholtarchives.org.uk/.well-known/security.txt
+

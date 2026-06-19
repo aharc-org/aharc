@@ -1,0 +1,695 @@
+/*  3-components.css
+    Oakwood Framework v4.1.1 visibility utils
+    Reusable UI blocks. Uses tokens from Layer 1, never raw values.
+*/
+
+
+.top-bar {
+    padding: var(--spacing-small) 0 0;  /* Small top padding */
+    display: flex;
+    justify-content: space-between; /* Horizontal spacing */
+    align-items: center;            /* Center items vertically */
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+}
+
+.top-bar .call {
+    text-decoration: none;
+    font-size: var(--font-fluid-small);
+    font-weight: bold;
+    font-style: italic;
+    color: var(--text-medium);
+    margin-left: auto;
+    margin-right: var(--spacing-content);
+}
+
+.top-bar .call:hover {
+    color: var(--link-hover-color);
+}
+
+/* Header 1 2 or 3 items one row */
+
+.site-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); /* safer than plain 1fr */
+    align-items: center;
+    max-width: var(--site-max-width);
+    width: 100%;
+    margin: 0 auto;
+    gap: var(--spacing-small);
+    padding: 0 var(--spacing-inline);
+}
+
+.site-title {
+    font-family: var(--font-brand);
+    font-weight: 400;
+    font-size: var(--font-fluid-large);
+    text-align: center; /* For use outside header */
+}
+
+.site-title--large {
+    font-size: var(--font-fluid-xlarge);
+}
+
+.header-left {
+    grid-column: 1;
+}
+
+.header-center {
+    grid-column: 2;
+    text-align: center;
+}
+
+.header-right {
+    grid-column: 3;
+    text-align: right;
+}
+
+/* Responsive images */
+.header-left img,
+.header-center img,
+.header-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;               /* allow items to wrap to new lines */
+    background-color: var(--bg-nav-footer);
+    justify-content: center;
+    padding: var(--spacing-small) 0;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+}
+
+.top-nav a {
+    color: var(--text-nav);
+    padding: 0 var(--spacing-medium);
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.top-nav a:hover,
+.top-nav a[aria-current="page"]  {
+    color: var(--text-nav-hover);
+}
+
+.hero-container {
+    max-width: var(--site-max-width);
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-image {
+    position: relative;
+    aspect-ratio: 4 / 1;
+    width: 100%;
+    display: block;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* End hero */
+
+/* Intro */
+
+.intro-container {
+    max-width: var(--block-max-width);
+    margin: 0 auto;
+}
+
+.intro-heading {
+    width: 100%;
+    font-style: italic;
+    font-size: var(--font-fluid-large);
+    text-align: center;
+}
+
+.intro-item {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-inner);
+
+}
+
+.intro-item p {
+    max-width: 90%;
+    margin-bottom: var(--spacing-small);
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: var(--font-fluid-body);
+}
+
+
+.intro-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    padding-top: var(--spacing-small);
+    height: auto;
+}
+
+/* End intro */
+
+/* ==========================
+   Oakwood 4.x Card System
+   Uses --bg-card-normal and --bg-card-highlight
+   ========================== */
+
+.card-grid {
+    --columns: 3;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--spacing-block);
+    max-width: var(--site-max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--bg-card-normal);
+    box-shadow: var(--shadow-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-block);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+/* Card image spacing for text cards */
+.card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: var(--spacing-small);
+}
+
+/* example html <article class="card card--highlight card--clickable"> */
+
+.card--highlight {
+    background-color: var(--bg-card-highlight);
+}
+
+.card--clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card--clickable:hover {
+    transform: translateY(-4px);
+}
+
+.card--bordered {
+    border: 1px solid var(--border-color);
+}
+
+.card--image-only {
+    padding: 0;
+}
+
+.card--image-only img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.card h3 {
+    margin: 0 0 var(--spacing-small) 0;
+}
+
+.card p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* End Card container */
+
+/* Content */
+
+.content-container {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-inner);
+    box-shadow: var(--shadow-light);
+    padding-inline: var(--spacing-inline);
+    padding-block: var(--spacing-block);
+    align-items: stretch;
+}
+
+.content-item {
+    width: 100%;
+    max-width: var(--block-max-width);
+    background-color: var(--bg-inner);
+    padding: var(--spacing-content);
+    margin: var(--spacing-small) auto;
+    font-size: var(--font-fluid-body);
+}
+
+.content-item p {
+    max-width: 75ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-item figure {
+    margin: var(--spacing-section) 0 var(--spacing-block);
+    background: none;
+}
+
+.content-item img {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto var(--spacing-block);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    object-fit: contain;
+}
+
+.content-item figcaption {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    font-size: var(--font-fluid-body);
+    font-style: italic;
+    text-align: center;
+}
+
+.content-item.narrow figure {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.content-item.side-by-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-block);
+    align-items: stretch;
+    margin: 0 auto;
+}
+
+.content-item.side-by-side figure {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    margin: var(--spacing-block) 0 0;
+}
+
+.content-item.side-by-side img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0;
+}
+
+.content-item.side-by-side figcaption {
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-block);
+    text-align: center;
+    align-self: end;
+}
+
+
+.content-item .table-wrapper {
+    overflow-x: auto;
+}
+
+.content-item table {
+    max-width: var(--content-max-width);
+    border-left: 4px solid var(--border-color);
+    background-color: var(--bg-blockquote-table);
+}
+
+/* End content */
+
+/* Call to action */
+
+.cta-container {
+    max-width: var(--block-max-width);
+    margin: 0 auto;
+}
+
+.cta-item {
+    width: 100%;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: var(--font-fluid-large);
+    text-align: center;
+    padding-top: var(--spacing-block);
+}
+
+/* End call to action */
+
+/* Single form contact column */
+
+.contact-container {
+    max-width: var(--block-max-width);
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-inner);
+    box-shadow: var(--shadow-light);
+}
+
+.contact-item {
+    max-width: var(--content-max-width);
+    margin: var(--spacing-block) auto;
+    padding: var(--spacing-content);
+    background-color: var(--bg-inner);
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Form Components
+   ========================== */
+
+/* Input / textarea base */
+.form-control {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-blockquote-table);
+    font-family: inherit;
+    font-size: var(--font-fluid-body);
+}
+
+/* Textarea tweaks */
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Label */
+.form-label {
+    display: block;
+}
+
+/* Required indicator */
+.form-label--required::after {
+    content: " *";
+    color: red;
+}
+.red-asterisk::before {
+    content: "* ";
+    color: red;
+}
+
+.cf-turnstile {
+    overflow: hidden;
+    display: block;
+}
+
+/* Field sizes */
+.form-control--small { max-width: var(--form-width-small); }
+.form-control--medium { max-width: var(--form-width-medium); }
+.form-control--large { max-width: var(--form-width-large); }
+
+/* End Single contact column */
+
+/* ==========================
+   Button Component
+   ========================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: inherit;
+    font-size: var(--font-fluid-body);
+    font-weight: 500;
+    line-height: 1;
+
+    padding: var(--spacing-small) var(--spacing-medium);
+
+    color: var(--text-button);
+    background-color: var(--bg-button);
+
+    border-radius: var(--button-radius);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+/* Hover / focus */
+
+
+.button:hover { /* First to avoid conflict */
+    background-color: var(--bg-button-hover);
+    color: var(--text-button-hover);
+}
+.button:active {
+    transform: translateY(2px);
+}
+.button:focus-visible {
+    outline: 2px solid  var(--brand-accent);
+    transform: translateY(-2px);
+}
+
+
+/* Variants */
+.button--small {
+    font-size: var(--font-fluid-small);
+    padding: var(--spacing-xsmall) var(--spacing-small);
+}
+
+.button--medium {
+    font-size: var(--font-fluid-medium);
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.button--large {
+    font-size: var(--font-fluid-large);
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.button--primary {
+    background-color: var(--bg-button);
+    color: var(--text-button);
+}
+
+.button--submit {
+    display: inline-flex;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button--submit:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    transform: translateY(0);
+    pointer-events: none;
+}
+
+/* End button */
+
+/* Floating button */
+
+.fab {
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--fab-size);
+    height: var(--fab-size);
+    font-size: calc(var(--fab-size) * 0.75);
+    padding-bottom: 0.15em;  /* optical correction for ↑ character */
+    line-height: 1;
+    font-weight: 700;
+    color: var(--fab-text);
+    background-color: var(--fab-bg);
+    border-radius: var(--fab-radius);
+    text-decoration: none;
+    box-shadow: var(--fab-shadow);
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.fab--visible {
+    opacity: 0.92;
+    pointer-events: auto;
+}
+
+
+.fab:hover,
+.fab:focus-visible {
+    opacity: 1;
+    transform: translateY(-4px);
+    background-color: var(--fab-bg-hover);
+    color: var(--fab-text-hover);
+}
+
+/* Focus accessibility */
+.fab:focus-visible {
+    outline: 3px solid var(--brand-accent);
+    outline-offset: 4px;
+}
+
+/* Position utility */
+
+.fab--bottom-right {
+    bottom: var(--fab-offset);
+    right: var(--fab-offset);
+}
+
+.fab--bottom-left {
+    bottom: var(--fab-offset);
+    left: var(--fab-offset);
+}
+
+/* Size variants */
+
+.fab--small {
+    width: var(--fab-size-small);
+    height: var(--fab-size-small);
+    font-size: calc(var(--fab-size-small) * 0.75);
+}
+
+.fab--large {
+    width: var(--fab-size-large);
+    height: var(--fab-size-large);
+    font-size: calc(var(--fab-size-large) * 0.75);
+}
+
+/* Shape variants */
+
+.fab--pill { border-radius: var(--button-radius); }
+.fab--sqr    { border-radius: var(--border-radius); }
+.fab--rect {
+    border-radius: var(--border-radius);
+    width: var(--fab-size-wide);
+}
+
+/* End of floating button */
+
+/* Footer custom element fort script */
+
+footer-site {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-nav-footer);
+    align-items: center;
+    gap: var(--spacing-content);
+    padding: var(--spacing-small) 0;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+}
+
+footer-site .footer-item {
+    width: 100%;
+    color: var(--text-footer);
+    text-align: center;
+    padding: var(--spacing-content) 0;
+}
+
+/* End site-footer */
+
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(min(var(--columns), 2), 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar .call {
+        font-size: clamp(0.9rem, 0.8vw + 0.8rem, 1rem);
+    }
+    .site-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-xsmall);
+    }
+    .header-left {
+        grid-column: 1;
+    }
+    .header-center {
+        grid-column: 1;
+    }
+    .header-right {
+        display: none;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .content-item.side-by-side {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .content-item.side-by-side figure {
+        width: 100%;
+        max-width: 500px;
+    }
+    .content-item.side-by-side img {
+        height: auto;
+    }
+    .cf-turnstile {
+        width: 200px;
+    }
+}
+
+/* End media queries */
+
+/* ============================================
+   VISIBILITY UTILITIES
+   ============================================ */
+
+/* Hidden/Visible base */
+.hidden  { display: none !important; }
+.visible { display: revert !important; }
+
+/* Mobile only (up to 767px) */
+@media (max-width: 767px) {
+  .hidden-mobile  { display: none !important; }
+  .visible-mobile { display: revert !important; }
+}
+
+/* Tablet only (768px–1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-tablet  { display: none !important; }
+  .visible-tablet { display: revert !important; }
+}
+
+/* Desktop (1024px–1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hidden-desktop  { display: none !important; }
+  .visible-desktop { display: revert !important; }
+}
+
+/* Large (1440px+) */
+@media (min-width: 1440px) {
+  .hidden-large  { display: none !important; }
+  .visible-large { display: revert !important; }
+}
